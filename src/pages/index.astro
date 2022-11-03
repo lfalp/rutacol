@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="container_somos">
+			<div class="conteiner_text">
+				<h1>Descubre una nueva forma de viajar</h1>
+				<div></div>
+				<p>Crea tus propias rutas de turismo y bríndales la oportunidad a otros usuarios de descubrir Colombia, gracias a tus alternativas</p>
+			</div>
+			 <img src="../src/assets/mapacol.png" alt="">
+		</div>
+	</main>
+	
+</Layout>
+
+<style>
+	main{
+		width: auto;
+		height: 721px;
+		background-image: linear-gradient(0deg, rgba(0,0,0,0.68), rgba(0,0,0,0.68)), url(../src/assets/image_inicio.png);
+    	background-blend-mode: darken, normal;
+	}
+	.container_somos {
+		display: flex;
+		align-items: center;
+	}
+	.conteiner_text {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		color: white;
+	}
+	h1 {
+		width: 653px;
+		height: 346px;
+	}
+</style>
