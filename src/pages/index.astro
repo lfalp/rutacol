@@ -1,41 +1,401 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import Foteer from "../components/Foteer.astro";
+import PruebaServicios from "../components/PruebaServicios.astro";
+import Suscribete from "../components/suscribete.astro";
+import BarraVertical from "../components/barra-vertical.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<div class="container_somos">
-			<div class="conteiner_text">
-				<h1>Descubre una nueva forma de viajar</h1>
-				<div></div>
-				<p>Crea tus propias rutas de turismo y bríndales la oportunidad a otros usuarios de descubrir Colombia, gracias a tus alternativas</p>
-			</div>
-			 <img src="../src/assets/mapacol.png" alt="">
-		</div>
-	</main>
-	
+<Layout title="Rutacol">
+  <main>
+    <div class="container_somos">
+      <div class="conteiner_text">
+        <h1>Descubre una nueva forma de viajar</h1>
+        <p>
+          Crea tus propias rutas de turismo y bríndales la oportunidad a otros
+          usuarios de descubrir Colombia, gracias a tus alternativas
+        </p>
+      </div>
+      <img src="../src/assets/imagen-hero.png" alt="" />
+    </div>
+  </main>
+
+  <div class="section-dos">
+    <div class="container-secsion-dos">
+      <img class="imagen-uno" src="../src/assets/image.png" alt="" />
+      <div class="box-fechas">
+        <div>
+          <h2>2020</h2>
+          <p>Historia</p>
+        </div>
+        <div>
+          <h2>03</h2>
+          <p>Experiencia</p>
+        </div>
+        <div>
+          <h2>02</h2>
+          <p>Creadores</p>
+        </div>
+      </div>
+      <div class="boxText">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Rutacol es una app que da a conocer cada uno de sus pequeños lugares o
+          sitios autóctonos de nuestro país (Colombia) poco conocidos, con el
+          fin de incentivar a cada uno de los usuarios a visitar y descubrir
+          aquellos lugares hermosos que posee nuestro territorio y que generan
+          un gran potencial turístico para cada una de las regiones y/o
+          ciudades.
+        </p>
+        <a href="/rutacol/quienes-somos"><Button /></a>
+      </div>
+      <BarraVertical />
+    </div>
+  </div>
+  <div class="section-cars">
+    <div class="title-cars">
+      <h2>¿Cuál es tú ruta ideal?</h2>
+      <p>
+        Rutacol ofrece diversas alternativas para los usuarios en donde podrá
+        seleccionar a su gusto y personalidad.
+      </p>
+    </div>
+    <div class="cars">
+      <div class="car-fauna">
+        <p>¿Te gustaría una travesía con fauna?</p>
+        <Button />
+      </div>
+      <div class="car-playa">
+        <p>¿Qué tal una ruta en la playa y arena?</p>
+        <Button />
+      </div>
+      <div class="car-nieve">
+        <p>¿Una aventura en la nieve?</p>
+        <Button />
+      </div>
+      <div class="car-montañas">
+        <p>¿Te gustaría una travesía en montañas?</p>
+        <Button />
+      </div>
+    </div>
+  </div>
+  <div class="section-four">
+    <a href="/rutacol/galeria"><Button /></a>
+    <p>Descubre la galería de RutaCol y viaja a través de las fotografías</p>
+  </div>
+  <div class="section-five">
+    <div class="container-five">
+      <img src="./src/assets/iphone-col.png" alt="" />
+      <div>
+        <h3>
+          Fortalece tu negocio, crea las mejores ofertas y da a conocer tu
+          microempresa.
+        </h3>
+        <p>Da tu primer paseo por Colombia</p>
+      </div>
+    </div>
+  </div>
+  <PruebaServicios />
+  <Suscribete />
+  <Foteer />
 </Layout>
 
 <style>
-	main{
-		width: auto;
-		height: 721px;
-		background-image: linear-gradient(0deg, rgba(0,0,0,0.68), rgba(0,0,0,0.68)), url(../src/assets/image_inicio.png);
-    	background-blend-mode: darken, normal;
-	}
-	.container_somos {
-		display: flex;
-		align-items: center;
-	}
-	.conteiner_text {
-		display: flex;
-		flex-direction: column;
-		gap: 50px;
-		color: white;
-	}
-	h1 {
-		width: 653px;
-		height: 346px;
-	}
+  main {
+    width: auto;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.68),
+        rgba(0, 0, 0, 0.68)
+      ),
+      url(../src/assets/image_inicio.png);
+    background-blend-mode: darken, normal;
+    font-size: var(--type-typography);
+  }
+  .container_somos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 46px;
+  }
+  .conteiner_text {
+    display: flex;
+    flex-direction: column;
+    color: var(--tertiary-color-white);
+    width: 559px;
+    height: 431px;
+    padding-top: 145px;
+    padding-bottom: 140px;
+    gap: 16px;
+    justify-content: space-around;
+  }
+  h1::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 8px;
+    content: "";
+    bottom: -16px;
+    left: 0;
+    width: 99px;
+  }
+  h1 {
+    position: relative;
+    font-size: 72px;
+    width: 527px;
+    height: 255px;
+  }
+
+  .conteiner_text p {
+    font-size: 24px;
+    width: 527px;
+    height: 84px;
+    font-style: normal;
+    line-height: 28px;
+  }
+
+  /* ----------- */
+
+  /* ------------------ */
+  .section-dos {
+    width: 100%;
+    font-family: var(--type-typography);
+  }
+  .container-secsion-dos {
+    display: flex;
+    justify-content: space-between;
+  }
+  .imagen-uno {
+    width: 574px;
+    height: 720px;
+  }
+
+  .boxText {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 708px;
+    height: 720px;
+    gap: 24px;
+  }
+  .boxText h2 {
+    width: 650px;
+    height: 72px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--Primary-color-yellow);
+    margin-top: 182px;
+  }
+  .boxText p {
+    width: 650px;
+    height: 180px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--fifth-color-grey);
+  }
+  .boxText a {
+    text-decoration: none;
+  }
+  .box-fechas {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 548px;
+    height: 126px;
+    background: #1f242e;
+    border-radius: 16px;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+    left: 220px;
+  }
+  .box-fechas h2 {
+    width: 94px;
+    height: 47px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--tertiary-color-white);
+  }
+  .box-fechas p {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+  }
+  .box-fechas div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 94px;
+    height: 78px;
+  }
+  /* -------------------------------- */
+  .section-cars {
+    width: 100%;
+    font-family: var(--type-typography);
+    padding-top: 130px;
+    padding-bottom: 96px;
+    background-image: url(./src/assets/imagen-section-dos.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .title-cars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 650px;
+    height: 148px;
+    margin: 0 auto;
+    padding-bottom: 64px;
+  }
+  .title-cars p {
+    width: 650px;
+    height: 60px;
+    color: var(--fifth-color-grey);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .title-cars h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    width: 650px;
+    height: 72px;
+    color: var(--sixth-color-blue);
+  }
+  .cars {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  .cars p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--tertiary-color-white);
+  }
+  .cars div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    width: 188px;
+    height: 339px;
+    border-radius: 8px;
+    background-size: cover;
+  }
+  .car-fauna {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+      url(./src/assets/fauna.png);
+    background-blend-mode: multiply, normal;
+  }
+  .car-playa {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+      url(./src/assets/playa.png);
+    background-blend-mode: multiply, normal;
+  }
+  .car-nieve {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+      url(./src/assets/nieve.png);
+    background-blend-mode: multiply, normal;
+  }
+  .car-montañas {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+      url(./src/assets/montañas.png);
+    background-blend-mode: multiply, normal;
+  }
+  /* ------------------------------------ */
+  .section-four {
+    display: flex;
+    font-family: var(--type-typography);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 394px;
+    padding-bottom: 230px;
+    gap: 234px;
+    justify-content: flex-end;
+    background-image: url(./src/assets/fondo-col.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .section-four p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    width: 650px;
+    height: 216px;
+    color: var(--tertiary-color-white);
+  }
+  .section-four a {
+    text-decoration: none;
+  }
+  /* ----------------------------- */
+  .section-five {
+    width: 100%;
+    font-family: var(--type-typography);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url(./src/assets/playa-fondo.png);
+    background-blend-mode: darken, normal;
+    background-size: cover;
+    color: var(--tertiary-color-white);
+    position: relative;
+  }
+  .section-five h3 {
+    width: 650px;
+    height: 288px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+  }
+  .section-five p {
+    width: 650px;
+    height: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .container-five img {
+    position: absolute;
+    left: 266px;
+    bottom: 70px;
+  }
+  .container-five {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 123px;
+    padding-top: 113px;
+    padding-bottom: 113px;
+    margin-right: 90px;
+  }
+  /* -------------------------------------- */
 </style>

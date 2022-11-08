@@ -1,7 +1,8 @@
 ---
-import Menu from '../components/Menu.astro';
+import Menu from "../components/Menu.astro";
+
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -9,42 +10,61 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Menu />
-		<slot />
-	</body>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Menu />
+    <slot />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+  <style is:global>
+    :root {
+      --accent: 124, 58, 237;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        #da62c4 30%,
+        white 60%
+      );
+      --Primary-color-yellow: #f7b900;
+      --secondary-color-narange: #f49f0a;
+      --tertiary-color-white: #ffffff;
+      --quaternary-color-black: #0a0d13;
+      --fifth-color-grey: #737b7d;
+      --sixth-color-blue: #00a9c3;
+      --seventh-color-pink: #e11242;
+      --background-color-white: #f1f1f1;
+      --type-typography: "Raleway", sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      background-color: #f6f6f6;
+    }
+    code {
+      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+  </style>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-		--Grey-color-707070: #707070;
-		--unnamed-color-e89400: #E89400;
-		--unnamed-color-f49f0a: #F49F0A;
-		--unnamed-color-d32b3a: #D32B3A;
-		--unnamed-color-df303f: #DF303F;
-		--White-color-ffffff: #FFFFFF;
-		--Black-color-0a0d13: #0A0D13;
-	}
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

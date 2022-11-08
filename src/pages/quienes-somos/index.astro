@@ -1,13 +1,389 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import Foteer from "../../components/Foteer.astro";
+import BarraHorizontal from "../../components/barra-horizontal.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		otro aqui
-	</main>
+<Layout title="¿Quienes somos?">
+  <main>
+    <div class="contain-main">
+      <div class="contain-image">
+        <img src="./src/assets/chivita-col.png" alt="" />
+        <p>Ilustración - Colombia | Ilustrador - Juan Carlos Correa Barros</p>
+      </div>
+      <div class="contain-text">
+        <h2>¿Quién es RutaCol?</h2>
+        <p>
+          Rutacol es una app que da a conocer cada uno de sus pequeños lugares o
+          sitios autóctonos de nuestro país (Colombia) poco conocidos, con el
+          fin de incentivar a cada uno de los usuarios a visitar y descubrir
+          aquellos lugares hermosos que posee nuestro territorio y que generan
+          un gran potencial turístico para cada una de las regiones y/o
+          ciudades.
+        </p>
+      </div>
+    </div>
+  </main>
+  <div class="section-mision">
+    <div class="imagen-mision">
+      <p>Barranquilla - Colombia Fotógrafa - Paula Angelica Gómez</p>
+    </div>
+    <div class="image-text">
+      <div class="text-mision">
+        <p class="text-one">
+          RUTACOL, surgió como una propuesta de un grupo de estudiantes de la
+          Corporación Unificada Nacional de Educación Superior (CUN),
+          pertenecientes a la escuela de comunicación y bellas artes, más
+          específicamente al programa académico de diseño gráfico, durante el
+          periodo 2021ª, con la objetivo de crear aplicación móvil, que
+          incentive el poder conocer lugares o sitios poco visitados en
+          Colombia, en actividades relacionadas con turismo, interés social o
+          cultural. Todo esto con el propósito de dinamizar la económica de
+          nuestro territorio y generar el interés en la población tanto nacional
+          como extranjera, para que descubra todas esas maravillas escondida que
+          tenemos y desconocemos; así mismo, analizar los aspectos básicos que
+          genera el Diseño Gráfico, para proponer ideas innovadoras que atraigan
+          al consumidor y demostrar como su buena utilización puede generar un
+          gran atractivo visual para el segmento de mercado al cual se quiere
+          llegar.
+        </p>
+        <h3>Misión</h3>
+        <p class="text-two">
+          Nuestra misión es promocionar el país, con el fin de impulsar el
+          turismo dentro de Colombia y dar a conocer aquellas microempresas que
+          necesitan por medio de la publicidad, atraer a clientes nacionales o
+          visitantes extranjeros, que estén dentro del territorio nacional.
+        </p>
+      </div>
+      <BarraHorizontal />
+    </div>
+  </div>
+
+  <div class="section-acudir">
+    <div class="contain-text-acudir">
+      <h3>¿A quién queremos llegar?</h3>
+      <p>
+        RutaCol tiene como mercado objetivo los adultos de 18 a 40 años,
+        ubicadas en la Republicada de Colombia y de un estrato socio económico
+        de medio a alto, con el propósito de presentarles una propuesta de
+        aplicación que no solo les sirva como medio para explorar opciones de
+        lugares para visitar, sino que también influya como instrumento para
+        poder descubrir, dar a conocer, impulsar y les deje un recuerdo sobre
+        aquellos sitios mágicos que se pueden encontrar en Colombia, de esta
+        manera genera el deseo de mostrar el potencial turístico que presenta
+        nuestro país.
+      </p>
+    </div>
+    <div class="iconBox">
+      <div class="prueba">
+        <img src="../src/assets/icons/icon-ruta.png" alt="" />
+      </div>
+      <p>Prueba nuestras rutas</p>
+    </div>
+  </div>
+  <div class="imagen"></div>
+  <div class="section-fundadores">
+    <div class="main-fundadores">
+      <h2>Fundadores de RutaCol</h2>
+      <div class="fundadores">
+        <div class="fundadora-paula">
+          <img src="./src/assets/paula.png" alt="" />
+          <p class="nombre">Paula Angelica Gómez Ramírez</p>
+          <p class="dedicacion">Fotógrafa y Diseñador gráfica</p>
+        </div>
+        <div class="fundador-carlos">
+          <img src="./src/assets/carlos.png" alt="" />
+          <p class="nombre">Juan Carlos Corres Barros</p>
+          <p class="dedicacion">Diseñador gráfico e Ilustrador</p>
+        </div>
+      </div>
+      <p class="descripcion">
+        Estudiantes de Diseño Grafico Escuela de Comunicación y Bellas Artes
+        Corporación Unificada Nacional De Educación Superior (CUN)
+      </p>
+    </div>
+    <div class="image-fundadores">
+      <img src="./src/assets/image-fundadores.png" alt="" />
+    </div>
+  </div>
+  <PruebaServicios />
+  <Foteer />
 </Layout>
 
 <style>
-
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    font-family: var(--type-typography);
+  }
+  .contain-main {
+    display: flex;
+    background: var(--sixth-color-blue);
+    padding-top: 46px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contain-image img {
+    width: 701.6px;
+    height: 600px;
+  }
+  .contain-image {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding-bottom: 25px;
+  }
+  .contain-image p {
+    color: var(--tertiary-color-white);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .contain-image p {
+    padding-left: 38px;
+  }
+  .contain-text {
+    display: flex;
+    flex-direction: column;
+    width: 559px;
+    height: 514px;
+    gap: 40px;
+  }
+  .contain-text p {
+    width: 527px;
+    height: 252px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--tertiary-color-white);
+  }
+  .contain-text h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 85px;
+    width: 527px;
+    height: 170px;
+    position: relative;
+    color: var(--tertiary-color-white);
+  }
+  .contain-text h2::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 6px;
+    content: "";
+    bottom: -16px;
+    left: 0;
+    width: 144px;
+  }
+  /* ----------------------------- */
+  .section-mision {
+    display: flex;
+  }
+  .text-mision {
+    width: 635px;
+    padding: 40px;
+  }
+  .imagen-mision {
+    width: 621px;
+    height: 983px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(./src/assets/image-misión.png);
+    background-blend-mode: multiply, normal;
+  }
+  .image-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text-one {
+    width: 555px;
+  }
+  .text-two {
+    width: 555px;
+  }
+  .text-one,
+  .text-two {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    color: var(--fifth-color-grey);
+  }
+  .image-text h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    width: 555px;
+    height: 72px;
+    padding: 16px 0;
+    color: var(--sixth-color-blue);
+  }
+  .imagen-mision {
+    position: relative;
+  }
+  .imagen-mision p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: right;
+    padding: 0 19px 26px 0;
+    width: 450px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: var(--tertiary-color-white);
+  }
+  /* --------------------------- */
+  .section-acudir {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+  }
+  .contain-text-acudir {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+    width: 944px;
+    height: 354px;
+    font-family: var(--type-typography);
+  }
+  .contain-text-acudir h3 {
+    width: 896px;
+    height: 72px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--Primary-color-yellow);
+  }
+  .contain-text-acudir p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    width: 896px;
+    height: 210px;
+    color: var(--fifth-color-grey);
+  }
+  .iconBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    width: 200px;
+    height: 214px;
+  }
+  .iconBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .iconBox p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 168px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--fifth-color-grey);
+  }
+  .prueba {
+    background-color: var(--Primary-color-yellow);
+  }
+  /* -------------------------- */
+  .imagen {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(./src/assets/imagen-fondo.png);
+    width: auto;
+    background-repeat: no-repeat;
+    height: 399px;
+    margin-bottom: 80px;
+    background-size: 100%;
+  }
+  /* ------------------------------------ */
+  .fundadores {
+    display: flex;
+    color: var(--fifth-color-grey);
+  }
+  .section-fundadores {
+    display: flex;
+    justify-content: end;
+  }
+  .main-fundadores {
+    width: 560px;
+    padding: 24px;
+  }
+  .main-fundadores h2 {
+    width: 512px;
+    height: 144px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    margin: 0 auto;
+    color: var(--seventh-color-pink);
+  }
+  .descripcion {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    width: 512px;
+    margin: 0 auto;
+    color: var(--fifth-color-grey);
+  }
+  .fundadora-paula,
+  .fundador-carlos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+    width: 272px;
+    height: 428px;
+  }
+  .nombre {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 224px;
+  }
+  .dedicacion {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    width: 224px;
+  }
 </style>

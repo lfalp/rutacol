@@ -1,13 +1,152 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
+import Button from "../../components/Button.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import Suscribete from "../../components/suscribete.astro";
+import Foteer from "../../components/Foteer.astro";
+import CarsRutas from "../../components/cars-rutas.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		nues...
-	</main>
+<Layout title="Nuestras Rutas">
+  <main>
+    <div class="main-text">
+      <div class="text-home-ruta">
+        <div class="text-ruta">
+          <h2>Nuestras rutas</h2>
+          <p>
+            Rutacol ofrece rutas alternativas en las zonas del Atlántico,
+            Magdalena y Cundinamarca
+          </p>
+        </div>
+        <div class="iconBox">
+          <div class="prueba">
+            <img src="../src/assets/icons/icon-gps.png" alt="" />
+          </div>
+          <p>Filtra tu búsqueda</p>
+        </div>
+      </div>
+    </div>
+    <div class="box-ruta-imagen">
+      <img src="./src/assets/imagen-ruta.png" alt="" />
+      <p>Ilustración - Colombia | Ilustrador - Juan Carlos Correa Barros</p>
+    </div>
+  </main>
+  <div class="cars-ruta">
+    <h3>¡Animate!</h3>
+    <CarsRutas />
+  </div>
+  <PruebaServicios />
+  <Suscribete />
+  <Foteer />
 </Layout>
 
 <style>
-
+  main {
+    display: flex;
+    background: var(--Primary-color-yellow);
+    font-family: var(--type-typography);
+    padding-bottom: 14px;
+    padding-top: 30px;
+  }
+  .box-ruta-imagen {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+  }
+  .text-home-ruta {
+    display: flex;
+    flex-direction: column;
+    color: var(--tertiary-color-white);
+    width: 524px;
+    padding: 39px;
+    gap: 40px;
+  }
+  .text-ruta {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .text-ruta p {
+    width: 527px;
+    height: 56px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .text-ruta h2 {
+    position: relative;
+    width: 527px;
+    height: 85px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    padding-bottom: 24px;
+  }
+  h2::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 8px;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 107px;
+  }
+  .iconBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    width: 200px;
+    height: 214px;
+  }
+  .iconBox div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .iconBox p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 168px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+  }
+  .prueba {
+    background-color: var(--sixth-color-blue);
+  }
+  /* ----------------- */
+  .cars-ruta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+  .cars-ruta h3 {
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    width: 896px;
+    height: 72px;
+    padding-top: 80px;
+    padding-bottom: 48px;
+    color: var(--sixth-color-blue);
+  }
+  /* ---------------------- */
 </style>

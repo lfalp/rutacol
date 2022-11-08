@@ -1,0 +1,208 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="section-form">
+  <div class="form">
+    <h3>Suscribete</h3>
+    <div>
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Escribe tu nombre aqui"
+      />
+    </div>
+    <div>
+      <label for="surname">Apellido</label>
+      <input
+        type="text"
+        name="surname"
+        id="surname"
+        placeholder="Escribe tu apellido aqui"
+      />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="ejemplo@tuempresa.com"
+      />
+    </div>
+    <div>
+      <label for="celular">Celular</label>
+      <input
+        type="tel"
+        name="celular"
+        id="celular"
+        placeholder="+57 000 000 0000"
+        required
+        min="1"
+        max="10"
+      />
+    </div>
+    <div>
+      <button class="boton">Enviar <ion-icon name="arrow-forward" /></button>
+    </div>
+  </div>
+  <div class="contain-info">
+    <div>
+      <img src="./src/assets/registrate.png" alt="" />
+      <div>
+        <h3>registrate</h3>
+        <p>
+          Pertenecer a RUTACOL, te brinda la alternativa de crear tus propias
+          rutas y darles la oportunidad a otros usuarios de conocerlas.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img src="./src/assets/ruta.png" alt="" />
+      <div>
+        <h3>rea tu ruta</h3>
+        <p>
+          Al crear tus rutas le brindas la posibilidad a otros usuarios que
+          exploren tus alternativas turísticas y das a conocer esos sitios
+          increíbles que has podido descubrir en Colombia.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img src="./src/assets/filtra-ruta.png" alt="" />
+      <div>
+        <h3>Filtra tu ruta</h3>
+        <p>
+          Desde tu celular con GPS RUTACOL, te permite encontrar las rutas más
+          cercanas a tu punto de ubicación, tomando como objetivo tus criterios
+          de busque como precio, palabras claves, ubicación actual y rango de
+          precios.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img src="./src/assets/buscar-ruta.png" alt="" />
+      <div>
+        <h3>Explora nuestras alternativas de rutas</h3>
+        <p>
+          RUTACOL, ofrece constantemente nuevas alternativas de rutas gracias a
+          las pymes inscritas a nuestra aplicación, al mismo tiempo da a conocer
+          esos lugares poco visitados en Colombia y que tienen un gran potencial
+          turístico.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img src="./src/assets/adquiere-pyme.png" alt="" />
+      <div>
+        <h3>Adquiere un registro para tu pyme</h3>
+        <p>
+          Para RUTACOL, es fundamental apoyar los emprendedores colombianos, por
+          eso les permite a todos los pequeños y medianos microempresarios, la
+          posibilidad de adquirir un registro mensual aún bajo costo para poder
+          promocionar tu negocio en una de nuestras rutas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .section-form {
+    display: flex;
+    justify-content: center;
+    font-family: var(--type-typography);
+    padding-top: 100px;
+    padding-bottom: 38px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 516px;
+    height: 635px;
+    padding: 32px;
+  }
+  .form div {
+    display: flex;
+    flex-direction: column;
+    gap: 7;
+  }
+  .form input {
+    width: 452px;
+    height: 48px;
+    font-size: 14px;
+    padding: 0 14px;
+    border: 1px solid var(--fifth-color-grey);
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .form label {
+    color: var(--fifth-color-grey);
+  }
+  .form h3 {
+    width: 452px;
+    height: 72px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--secondary-color-narange);
+  }
+  .contain-info {
+    width: 566px;
+    height: 701px;
+    padding: 11px;
+  }
+  .contain-info img {
+    width: 57px;
+    height: 58px;
+  }
+  .contain-info h3 {
+    width: 100%;
+    height: 59px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 72px;
+    color: var(--secondary-color-narange);
+  }
+  .contain-info p {
+    width: 490px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--fifth-color-grey);
+  }
+
+  .contain-info > div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: -11px;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 55px;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+    background-color: var(--secondary-color-narange);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: var(#6d6b6b);
+    opacity: 0.5;
+  }
+</style>

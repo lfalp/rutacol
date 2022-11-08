@@ -1,65 +1,73 @@
 ---
 const { href, title, body } = Astro.props;
 ---
+
 <div class="container_menu">
-	<img class="logo" src="../src/assets/logo_rutacol.png" alt="Logo de Rutacol">
-	<div class="menu">
-		<ul>
-			<li><a href="/">Inicio</a></li>
-			<li><a href="quienes-somos">Quienes Somos</a></li>
-			<li><a href="nuestras-rutas">Nuestras rutas</a></li>
-			<li><a href="historias">Historia</a></li>
-			<li><a href="galeria">Galeria</a></li>
-			<li><a href="contactanos">Contactanos</a></li>
-			<a href=""><ion-icon class="search" name="search"></ion-icon></a>
-		</ul>
-		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-	</div>
+  <img class="logo" src="../src/assets/Logo.png" alt="Logo de Rutacol" />
+  <div class="menu">
+    <ul>
+      <li><a href="/rutacol/">Inicio</a></li>
+      <li><a href="/rutacol/quienes-somos">Quienes Somos</a></li>
+      <li><a href="/rutacol/nuestras-rutas">Nuestras rutas</a></li>
+      <li><a href="/rutacol/galeria">Galeria</a></li>
+      <li><a href="/rutacol/contactanos">Contactanos</a></li>
+      <a href=""><ion-icon class="search" name="search" /></a>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </div>
 <style>
-	   *{
-            margin: 0;
-            padding: 0;
-            
-        }
-		.container_menu{
-			display: flex;
-    		justify-content: space-evenly;
-			width: auto;
-			height: 87px;
-		}
-		.menu {
-			display: flex;
-			width: 800px;
-		}
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container_menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 87px;
+    width: 100%;
+    gap: 31px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--tertiary-color-white);
+  }
+  .menu {
+    display: flex;
+    width: 778px;
+    height: 31px;
+    font-family: var(--type-typography);
+    font-weight: 600;
+    font-size: 20px;
+  }
 
-        .logo{
-            width: 267px;
-            height: 87px;
-        }
-        
-        .search {
-            width: 26px;
-            height: 26px;
-        }
-        ul {
-            display: flex;
-            width: 900px;
-            justify-content: space-evenly;
-            align-items: center;
-			gap: 25px;
-        }
-		li {
-			list-style: none;
-		}
-		a {
-			color: black;
-			text-decoration: none;
-			border-bottom: transparent solid 2px ;
-		}
-        a:hover {
-			border-bottom-color: var(--unnamed-color-e89400);
-            color: var(--unnamed-color-e89400);
-            cursor:context-menu;
-        }
+  .logo {
+    width: 191.63px;
+    height: 56px;
+  }
+  .search {
+    width: 26px;
+    height: 26px;
+  }
+  ul {
+    display: flex;
+    width: 900px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    color: var(--fifth-color-grey);
+    text-decoration: none;
+    border-bottom: transparent solid 2px;
+  }
+  a:hover {
+    border-bottom-color: var(--Primary-color-yellow);
+    color: var(--Primary-color-yellow);
+    cursor: context-menu;
+  }
 </style>

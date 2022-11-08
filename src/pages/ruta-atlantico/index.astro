@@ -1,0 +1,172 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Departamento del Atlantico">
+  <main>
+    <div class="atlantico">
+      <div class="imagen-atlantico">
+        <img src="./src/assets/imagen-rutas-atlantico.png" alt="" />
+      </div>
+      <div class="text-atlantico">
+        <h1>Departamento del Atlántico</h1>
+        <p>
+          Este maravilloso departamento tiene un sin número de atractivos
+          turísticos desde la parte natural, cultural y científico. Uno de sus
+          principales atractivos es su capital la ciudad de Barranquilla, con su
+          agraciado atractivo estructural, lujosos y tranquilos balnearios, en
+          donde resaltan las Bocas de Ceniza y la ciénaga de Luruaco; las playas
+          cálidas y arenosas, como las de Santa Verónica, Palmarito, Sabanilla y
+          Puerto Colombia, y el zoológico de Barranquilla. Limita con el
+          departamento de Bolívar está la ciénaga de El Totumo en donde es
+          aprovechada por los visitantes que llegan a disfrutar del volcán.
+        </p>
+      </div>
+    </div>
+    <div class="title-rutas">
+      <p>Rutas</p>
+    </div>
+  </main>
+  <div class="section-rutas">
+    <div class="car-rutas">
+      <div class="ruta-culturenosa">
+        <div class="button-cultuarenosa">
+          <div class="button-ruta-main">
+            <a href=""><button>Ruta culturenosa</button></a>
+          </div>
+          <h4>Barranquilla-Atlántico</h4>
+          <p>Original de Rutacol</p>
+          <div>
+            <img src="./src/assets/icons/icon-navegante.png " alt="" />
+            <a href=""><button>Ver ruta completa</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .atlantico {
+    display: flex;
+    font-family: var(--type-typography);
+    background: var(--Primary-color-yellow);
+    color: var(--tertiary-color-white);
+  }
+
+  .imagen-atlantico {
+    padding-left: 65px;
+  }
+  .imagen-atlantico img {
+    height: 100%;
+  }
+  .text-atlantico {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 559px;
+  }
+  h1::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 8px;
+    content: "";
+    bottom: -30px;
+    left: 18px;
+    width: 150px;
+  }
+  h1 {
+    position: relative;
+    width: 527px;
+    height: 170px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    padding: 26px 26px 0px 16px;
+  }
+
+  .text-atlantico p {
+    width: 527px;
+    height: 392px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    padding: 26px 26px 0px 16px;
+  }
+  .title-rutas {
+    position: relative;
+    width: 100%;
+    height: 253px;
+    background-image: url(./src/assets/imagen-ruta-background.png);
+  }
+  .title-rutas p {
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    width: 500px;
+    height: 80px;
+    right: 140px;
+    bottom: 85px;
+    text-align: end;
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+  }
+  /* -------------------------- */
+  .ruta-culturenosa {
+    position: relative;
+    width: 400px;
+    height: 617px;
+    background: url(./src/assets/background-cultuarenosa.png);
+  }
+  .button-cultuarenosa {
+    position: absolute;
+    width: 400px;
+    height: 178px;
+    bottom: 0;
+    border-radius: 30px 30px 0px 0px;
+    background: var(--tertiary-color-white);
+  }
+  .button-ruta-main {
+  }
+  .button-ruta-main a {
+    text-decoration: none;
+  }
+  .button-ruta-main button {
+    display: flex;
+    border-radius: 45px;
+    width: 300px;
+    height: 45px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 140%;
+    align-items: center;
+    justify-content: center;
+    background: #e21542;
+    color: var(--tertiary-color-white);
+    border: none;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: var(#6d6b6b);
+    opacity: 0.5;
+  }
+  .button-cultuarenosa h3 p {
+    font-family: var(--type-typography);
+    color: var(--fifth-color-grey);
+  }
+  .button-cultuarenosa h3 p {
+    font-size: 14px;
+    line-height: 19px;
+    align-items: center;
+  }
+  .button-cultuarenosa h3 {
+    font-weight: 700px;
+  }
+  .button-cultuarenosa p {
+    font-weight: 500px;
+  }
+</style>

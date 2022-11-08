@@ -1,13 +1,491 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import BarraVertical from "../../components/barra-vertical.astro";
+import Layout from "../../layouts/Layout.astro";
+import Foteer from "../../components/Foteer.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		Galeria
-	</main>
+<Layout title="Galeria De Rutacol">
+  <main>
+    <div>
+      <img src="./src/assets/ballena.png" alt="" />
+    </div>
+    <div class="contain-text-galeria">
+      <div>
+        <BarraVertical />
+      </div>
+      <div class="text-galeria">
+        <h3>Galería de RutaCol</h3>
+        <p class="texto-uno-galeria">
+          Viajero, te damos la bienvenida a la galería de RutaCol; un espacio en
+          donde viajaras mediante la fotografía a diversos rincones de Colombia
+          así como una pequeña descripción de cada lugar.
+        </p>
+        <p class="texto-dos-galeria">
+          Tiempo de viajar a través de la fotografía
+        </p>
+      </div>
+    </div>
+  </main>
+  <div class="text-santa-marta">
+    <div>
+      <img class="imagen-dos" src="../src/assets/barra-vertical.png" alt="" />
+    </div>
+    <div class="main-text">
+      <div class="text">
+        <h3>Santa Marta Colombia</h3>
+        <p>
+          El departamento de Risaralda se encuentra realizando intervenciones en
+          140 predios ubicados en Áreas Estratégicas para la Conservación de
+          Recurso Hídrico, las cuales en su gran mayoría hacen parte de las
+          Áreas Protegidas del Departamento, espacios que buscan proteger los
+          ecosistemas estratégicos, una mayor sostenibilidad ambiental y mejorar
+          el hábitat de la diversidad de flora y fauna propias de este
+          territorio (Pereira 2022).
+        </p>
+      </div>
+      <div class="image-text">
+        <img src="./src/assets/playa-santa-marta.png" alt="" />
+        <p>Tiempo de viajar a través de la fotografía</p>
+      </div>
+    </div>
+    <div class="imagenes-de-santa-marta">
+      <div>
+        <img src="./src/assets/playa-marta.png" alt="" />
+      </div>
+      <div>
+        <img src="./src/assets/atardecer-marta.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="descubrir-galeria">
+    <p>Descubre la galería de RutaCol y viaja a través de las fotografías</p>
+  </div>
+  <div class="moor">
+    <div class="moor-bear">
+      <img src="./src/assets/bear.png" alt="" />
+      <p>Páramo de Suma Paz - Colombia | Fotógrafa - Paula Angelica Gómez</p>
+    </div>
+    <div class="text-moor">
+      <div class="text-main">
+        <h3>Páramo de Suma Paz Colombia</h3>
+        <p>
+          El páramo tiene una extensión de 333.420 hectáreas. Es una de las
+          fuentes hídricas más importantes del país. Dentro de su ecosistema
+          habitan osos de anteojos, venados, águila y cóndores, además de otras
+          especies.
+        </p>
+        <img src="./src/assets/playa-moor.png" alt="" />
+      </div>
+      <div>
+        <BarraVertical />
+      </div>
+    </div>
+  </div>
+  <div class="section-soacha">
+    <div class="soacha-text">
+      <div>
+        <BarraVertical />
+      </div>
+      <div class="main-text-soacha">
+        <h3>Soacha - Colombia</h3>
+        <p>
+          Soacha es el municipio más poblado del departamento de Cundinamarca en
+          Colombia. Su área es de 184 km² (kilómetros cuadrados), y su población
+          es de 808 288 (2022).2​ Su área urbana está conurbada con la de
+          Bogotá, siendo parte de su área metropolitana.
+        </p>
+      </div>
+    </div>
+    <div class="imagen-soacha">
+      <img src="./src/assets/soacha.png" alt="" />
+      <p>Soacha - Colombia | Fotógrafa - Paula Angelica Gómez</p>
+    </div>
+  </div>
+  <div class="section-imagen">
+    <div class="imagen-coliflor">
+      <img src="./src/assets/fauna.png" alt="" />
+      <p>Soacha - Colombia | Fotógrafa - Paula Angelica Gómez</p>
+    </div>
+    <div class="imagen-montañas">
+      <img src="./src/assets/montañas.png" alt="" />
+      <p>Soacha - Colombia | Fotógrafa - Paula Angelica Gómez</p>
+    </div>
+  </div>
+  <div class="section-bogota">
+    <div class="title-bogota">
+      <h3>Bogotá - Colombia</h3>
+    </div>
+    <div class="info-bogota">
+      <div class="imagen-de-plaza">
+        <img src="./src/assets/plaza-bogota.png" alt="" />
+        <p>Soacha - Colombia | Fotógrafa - Paula Angelica Gómez</p>
+      </div>
+      <p class="info-main-bogota">
+        Bogotá es la capital de Colombia y está ubicada en el centro del país,
+        en una región conocida como la Sabana de Bogotá sobre la cordillera
+        oriental de Los Andes. La ciudad cuenta con 7’743.955 habitantes (2020)
+        y con una participación del 25,5% del PIB del país, es uno de los
+        principales centros de comercio, servicios financieros y empresariales
+        de América Latina.
+      </p>
+    </div>
+  </div>
+  <PruebaServicios />
+  <Foteer />
 </Layout>
 
 <style>
+  main {
+    display: flex;
+    width: 100%;
+    font-family: var(--type-typography);
+  }
 
+  .text-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 170px 30px 170px 30px;
+  }
+  .text-galeria h3 {
+    width: 548px;
+    height: 170px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    text-align: center;
+    color: var(--sixth-color-blue);
+  }
+  .texto-uno-galeria {
+    width: 548px;
+    height: 120px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--fifth-color-grey);
+  }
+  .texto-dos-galeria {
+    width: 548px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--fifth-color-grey);
+  }
+  .contain-text-galeria {
+    display: flex;
+    background: var(--background-color-white);
+  }
+  div img {
+    width: 708px;
+    height: 720px;
+  }
+  /* ------------------------ */
+  .text-santa-marta {
+    display: flex;
+    font-family: var(--type-typography);
+  }
+  .imagen-dos {
+    width: 21px;
+    height: 100%;
+  }
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 811px;
+    background: var(--background-color-white);
+  }
+  .image-text img {
+    width: 570px;
+    height: 364px;
+  }
+  .image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 650px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--fifth-color-grey);
+  }
+  .text h3 {
+    width: 650px;
+    height: 170px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    color: var(--sixth-color-blue);
+  }
+  .text p {
+    width: 650px;
+    height: 240px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--fifth-color-grey);
+  }
+  .imagenes-de-santa-marta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 48px;
+    width: 605px;
+    height: 962px;
+    background-image: url(./src/assets/soacha.png);
+  }
+  .imagenes-de-santa-marta img {
+    width: 445px;
+    height: 377px;
+  }
+  /* ----------------------- */
+  .descubrir-galeria {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    background-image: url(./src/assets/imagen-descubre-galeria.png);
+  }
+  .descubrir-galeria p {
+    width: 650px;
+    height: 168px;
+    margin-right: 100px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    font-family: var(--type-typography);
+    color: var(--background-color-white);
+  }
+  /* --------------------- */
+  .moor {
+    display: flex;
+    width: 100%;
+    height: 720px;
+    font-family: var(--type-typography);
+  }
+  .moor-bear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 68px;
+    gap: 24px;
+    width: 708px;
+
+    color: var(--fifth-color-grey);
+    background: var(--background-color-white);
+  }
+  .moor-bear img {
+    width: 548px;
+    height: 543px;
+  }
+  .moor-bear p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    width: 548px;
+    height: 19px;
+    padding-bottom: 68px;
+  }
+  .text-moor {
+    display: flex;
+  }
+  .text-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 708px;
+    padding-top: 60px;
+    gap: 24px;
+  }
+  .text-main img {
+    width: 708px;
+  }
+  .text-main h3 {
+    width: 548px;
+    height: 112px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: var(--sixth-color-blue);
+  }
+  .text-main p {
+    width: 548px;
+    height: 150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--fifth-color-grey);
+  }
+  /* --------------------- */
+  .section-soacha {
+    display: flex;
+    font-family: var(--type-typography);
+  }
+  .soacha-text {
+    display: flex;
+    width: 708px;
+  }
+  .soacha-text h3 {
+    width: 548px;
+    height: 56px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: var(--secondary-color-narange);
+  }
+  .soacha-text p {
+    width: 548px;
+    height: 180px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--fifth-color-grey);
+  }
+  .main-text-soacha {
+    display: flex;
+    flex-direction: column;
+    padding: 230px 80px;
+    gap: 24px;
+  }
+  .imagen-soacha {
+    text-align: center;
+    width: 708px;
+    padding: 67px 0;
+  }
+  .imagen-soacha img {
+    width: 548px;
+    height: 543px;
+  }
+  .imagen-soacha p {
+    width: 548px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 auto;
+    padding-top: 24px;
+    color: var(--fifth-color-grey);
+  }
+  /* ------------------------------------- */
+  .section-imagen {
+    display: flex;
+  }
+  .section-imagen div {
+    width: 708px;
+  }
+  .section-imagen div img {
+    width: 548px;
+    height: 543px;
+    border: 14px solid var(--background-color-white);
+  }
+  .section-imagen div p {
+    width: 548px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: var(--type-typography);
+    margin: 0 auto;
+    text-align: center;
+    color: var(--fifth-color-grey);
+  }
+  .imagen-coliflor,
+  .imagen-montañas {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 67px 40px;
+  }
+  /* -------------------------- */
+  .section-bogota {
+    height: 900px;
+    font-family: var(--type-typography);
+  }
+  .info-bogota {
+    display: flex;
+    position: relative;
+  }
+  .info-main-bogota {
+    width: 548px;
+    height: 240px;
+    position: absolute;
+    right: 67px;
+    top: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    color: var(--fifth-color-grey);
+  }
+  .title-bogota {
+    position: relative;
+    width: 100%;
+    height: 379px;
+    background-image: url(./src/assets/imagen-bogota.png);
+  }
+  .title-bogota h3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 548px;
+    height: 56px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: right;
+    margin: 0 43px 31px 0;
+    color: var(--tertiary-color-white);
+  }
+  .imagen-de-plaza {
+    position: absolute;
+    top: -134px;
+    left: 160px;
+    text-align: center;
+  }
+  .imagen-de-plaza p {
+    position: absolute;
+    width: 548px;
+    height: 19px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-top: 24px;
+    color: var(--fifth-color-grey);
+  }
+  .imagen-de-plaza img {
+    width: 548px;
+    height: 543px;
+  }
 </style>
