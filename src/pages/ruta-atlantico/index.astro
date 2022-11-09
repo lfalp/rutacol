@@ -34,8 +34,10 @@ import Layout from "../../layouts/Layout.astro";
           <div class="button-ruta-main">
             <a href=""><button>Ruta culturenosa</button></a>
           </div>
-          <h4>Barranquilla-Atlántico</h4>
-          <p>Original de Rutacol</p>
+          <div class="text-title-cultuarenosa">
+            <h4>Barranquilla-Atlántico</h4>
+            <p>Original de Rutacol</p>
+          </div>
           <div>
             <img src="/rutacol/assets/icons/icon-navegante.png " alt="" />
             <a href=""><button>Ver ruta completa</button></a>
@@ -128,8 +130,10 @@ import Layout from "../../layouts/Layout.astro";
     bottom: 0;
     border-radius: 30px 30px 0px 0px;
     background: var(--tertiary-color-white);
-  }
-  .button-ruta-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
   .button-ruta-main a {
     text-decoration: none;
@@ -154,19 +158,21 @@ import Layout from "../../layouts/Layout.astro";
     background: var(#6d6b6b);
     opacity: 0.5;
   }
-  .button-cultuarenosa h3 p {
+  .text-title-cultuarenosa {
     font-family: var(--type-typography);
     color: var(--fifth-color-grey);
+    width: 352px;
+    height: 40px;
+    text-align: center;
   }
-  .button-cultuarenosa h3 p {
+  .text-title-cultuarenosa h3 {
+    font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    align-items: center;
   }
-  .button-cultuarenosa h3 {
-    font-weight: 700px;
-  }
-  .button-cultuarenosa p {
-    font-weight: 500px;
+  .text-title-cultuarenosa p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
   }
 </style>

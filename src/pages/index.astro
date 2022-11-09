@@ -23,17 +23,21 @@ import BarraVertical from "../components/barra-vertical.astro";
 
   <div class="section-dos">
     <div class="container-secsion-dos">
-      <img class="imagen-uno" src="/rutacol/assets/image.png" alt="" />
+      <img
+        class="imagen-uno"
+        src="/rutacol/assets/image.png"
+        alt="Hombre mirando el horizonte"
+      />
       <div class="box-fechas">
-        <div>
+        <div class="item-box-fechas">
           <h2>2020</h2>
           <p>Historia</p>
         </div>
-        <div>
+        <div class="item-box-fechas">
           <h2>03</h2>
           <p>Experiencia</p>
         </div>
-        <div>
+        <div class="item-box-fechas">
           <h2>02</h2>
           <p>Creadores</p>
         </div>
@@ -230,7 +234,7 @@ import BarraVertical from "../components/barra-vertical.astro";
     line-height: 23px;
     color: var(--tertiary-color-white);
   }
-  .box-fechas div {
+  .item-box-fechas {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -386,7 +390,7 @@ import BarraVertical from "../components/barra-vertical.astro";
   .container-five img {
     position: absolute;
     left: 266px;
-    bottom: 70px;
+    bottom: 35px;
   }
   .container-five {
     display: flex;
