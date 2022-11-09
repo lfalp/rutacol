@@ -26,8 +26,13 @@ import BarraHorizontal from "../../components/barra-horizontal.astro";
     </div>
   </main>
   <div class="section-mision">
-    <div class="imagen-mision"></div>
+    <div class="imagen-mision">
+      <p>Historia Rutacol</p>
+    </div>
     <div class="image-text">
+      <div class="descripcion-text-mision">
+        <p>Barranquilla-Colombia | Fotógrafa - Paula Angelica Gomez</p>
+      </div>
       <div class="text-mision">
         <p class="text-one">
           RUTACOL, surgió como una propuesta de un grupo de estudiantes de la
@@ -121,8 +126,9 @@ import BarraHorizontal from "../../components/barra-horizontal.astro";
     display: flex;
     background: var(--sixth-color-blue);
     padding-top: 46px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
   }
   .contain-image img {
     width: 701.6px;
@@ -181,14 +187,30 @@ import BarraHorizontal from "../../components/barra-horizontal.astro";
   /* ----------------------------- */
   .section-mision {
     display: flex;
+    justify-content: center;
   }
   .text-mision {
     width: 635px;
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
+  }
+  .descripcion-text-mision {
+    width: 730px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0 20px 0px;
+    background: #fff;
+  }
+  .descripcion-text-mision p {
+    width: 100%;
+    height: 23px;
+    margin-left: 46px;
+    color: var(--fifth-color-grey);
   }
   .imagen-mision {
     width: 621px;
-    height: 983px;
+    padding-top: 80px;
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.25),
@@ -196,6 +218,17 @@ import BarraHorizontal from "../../components/barra-horizontal.astro";
       ),
       url("/rutacol/assets/image-misión.png");
     background-blend-mode: multiply, normal;
+    background-repeat: no-repeat;
+  }
+  .imagen-mision p {
+    width: 433px;
+    height: 310px;
+    font-size: 90px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--type-typography);
+    font-weight: 600;
+    color: var(--tertiary-color-white);
   }
   .image-text {
     display: flex;
@@ -232,6 +265,7 @@ import BarraHorizontal from "../../components/barra-horizontal.astro";
   .section-acudir {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-top: 80px;
   }
   .contain-text-acudir {

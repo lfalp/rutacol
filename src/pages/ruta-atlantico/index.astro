@@ -29,18 +29,41 @@ import Layout from "../../layouts/Layout.astro";
   </main>
   <div class="section-rutas">
     <div class="car-rutas">
-      <div class="ruta-culturenosa">
-        <div class="button-cultuarenosa">
+      <div class="car-de-rutas">
+        <div class="button-main">
           <div class="button-ruta-main">
             <a href=""><button>Ruta culturenosa</button></a>
           </div>
-          <div class="text-title-cultuarenosa">
+          <div class="text-title-de-cars">
             <h4>Barranquilla-Atlántico</h4>
             <p>Original de Rutacol</p>
           </div>
-          <div>
-            <img src="/rutacol/assets/icons/icon-navegante.png " alt="" />
+          <div class="button-car-de-rutas">
+            <img
+              src="/rutacol/assets/icons/icon-de-ruta.svg "
+              alt="incono de ruta"
+            />
             <a href=""><button>Ver ruta completa</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="car-de-rutas">
+        <div class="button-main">
+          <div class="button-ruta-main , ruta-cumbia">
+            <a href=""><button>Ruta culturenosa</button></a>
+          </div>
+          <div class="text-title-de-cars">
+            <h4>Barranquilla-Atlántico</h4>
+            <p>Original de Rutacol</p>
+          </div>
+          <div class="button-car-de-rutas">
+            <img
+              src="/rutacol/assets/icons/icon-de-ruta.svg "
+              alt="incono de ruta"
+            />
+            <a href=""
+              ><button class="ruta-car-cumbia">Ver ruta completa</button>
+            </a>
           </div>
         </div>
       </div>
@@ -117,27 +140,35 @@ import Layout from "../../layouts/Layout.astro";
     font-family: var(--type-typography);
   }
   /* -------------------------- */
-  .ruta-culturenosa {
+  .car-rutas {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 80px 0 80px 0;
+  }
+  .car-de-rutas {
     position: relative;
     width: 400px;
     height: 617px;
     background: url("/rutacol/assets/background-cultuarenosa.png");
   }
-  .button-cultuarenosa {
+  .button-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-evenly;
     position: absolute;
     width: 400px;
     height: 178px;
     bottom: 0;
     border-radius: 30px 30px 0px 0px;
     background: var(--tertiary-color-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
   }
   .button-ruta-main a {
     text-decoration: none;
   }
+
   .button-ruta-main button {
     display: flex;
     border-radius: 45px;
@@ -149,7 +180,7 @@ import Layout from "../../layouts/Layout.astro";
     line-height: 140%;
     align-items: center;
     justify-content: center;
-    background: #e21542;
+    background: var(--eight-color-pink);
     color: var(--tertiary-color-white);
     border: none;
     transition: 0.3s;
@@ -158,21 +189,54 @@ import Layout from "../../layouts/Layout.astro";
     background: var(#6d6b6b);
     opacity: 0.5;
   }
-  .text-title-cultuarenosa {
+  .text-title-de-cars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     font-family: var(--type-typography);
     color: var(--fifth-color-grey);
     width: 352px;
     height: 40px;
     text-align: center;
   }
-  .text-title-cultuarenosa h3 {
+  .text-title-de-cars h3 {
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
   }
-  .text-title-cultuarenosa p {
+  .text-title-de-cars p {
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
+  }
+  .button-car-de-rutas {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    gap: 9px;
+    text-align: center;
+    background: var(--eight-color-pink);
+    width: 199px;
+    height: 38px;
+    border-radius: 7px;
+  }
+  .button-car-de-rutas img {
+    height: 27px;
+    width: 29px;
+  }
+
+  .button-car-de-rutas button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 154.3%;
+    height: 28px;
+    background-color: var(--eight-color-pink);
+    color: var(--tertiary-color-white);
+    border: none;
+  }
+  .ruta-car-cumbia {
+    background-color: var(--Primary-color-yellow);
   }
 </style>
