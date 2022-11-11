@@ -1,0 +1,138 @@
+---
+const { ruta, background, title, parrafo, backgroundColor, buttonText } =
+  Astro.props;
+---
+
+<div class="car-rutas">
+  <div
+    class="car-de-rutas"
+    style={{ "background-image": `url('${background}')` }}
+  >
+    <div class="button-main">
+      <div class="button-ruta-main">
+        <a href={ruta}
+          ><button style={{ "background-color": `var(${backgroundColor})` }}
+            >{buttonText}</button
+          >
+        </a>
+      </div>
+      <div class="text-title-de-cars">
+        <h4>{title}</h4>
+        <p>{parrafo}</p>
+      </div>
+      <div
+        class="button-car-de-rutas"
+        style={{ "background-color": `var(${backgroundColor})` }}
+      >
+        <img
+          src="/rutacol/assets/icons/icon-de-ruta.svg"
+          alt="incono de ruta"
+        />
+        <a href=""
+          ><button style={`background-color: var(${backgroundColor});`}
+            >Ver ruta completa</button
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .car-de-rutas {
+    position: relative;
+    width: 400px;
+    height: 617px;
+  }
+  .button-car-de-rutas {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    gap: 9px;
+    text-align: center;
+    background: var(--eight-color-pink);
+    width: 199px;
+    height: 38px;
+    border-radius: 7px;
+  }
+  .button-car-de-rutas img {
+    height: 27px;
+    width: 29px;
+  }
+
+  .button-car-de-rutas button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 154.3%;
+    height: 28px;
+    background-color: var(--eight-color-pink);
+    color: var(--tertiary-color-white);
+    border: none;
+  }
+  .car-rutas {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 80px 0 80px 0;
+  }
+
+  .button-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 400px;
+    height: 178px;
+    bottom: 0;
+    border-radius: 30px 30px 0px 0px;
+    background: var(--tertiary-color-white);
+  }
+  .button-ruta-main a {
+    text-decoration: none;
+  }
+
+  .button-ruta-main button {
+    display: flex;
+    border-radius: 45px;
+    width: 300px;
+    height: 45px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 140%;
+    align-items: center;
+    justify-content: center;
+    background: var(--eight-color-pink);
+    color: var(--tertiary-color-white);
+    border: none;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: var(#6d6b6b);
+    opacity: 0.5;
+  }
+  .text-title-de-cars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--type-typography);
+    color: var(--fifth-color-grey);
+    width: 352px;
+    height: 40px;
+    text-align: center;
+  }
+  .text-title-de-cars h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .text-title-de-cars p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+  }
+</style>

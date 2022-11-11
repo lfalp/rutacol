@@ -6,24 +6,23 @@ import Suscribete from "../../components/suscribete.astro";
 import Foteer from "../../components/Foteer.astro";
 ---
 
-<Layout title="Departamento del Atlantico">
+<Layout title="Departamento del Magdalena">
   <main>
-    <div class="atlantico">
-      <div class="imagen-atlantico">
-        <img src="/rutacol/assets/imagen-rutas-atlantico.png" alt="" />
+    <div class="magdalena">
+      <div class="imagen-magdalena">
+        <img src="/rutacol/assets/imagen-rutas-magdalena.png" alt="" />
       </div>
-      <div class="text-atlantico">
-        <h1>Departamento del Atlántico</h1>
+      <div class="text-magdalena">
+        <h1>Departamento del Magdalena</h1>
         <p>
-          Este maravilloso departamento tiene un sin número de atractivos
-          turísticos desde la parte natural, cultural y científico. Uno de sus
-          principales atractivos es su capital la ciudad de Barranquilla, con su
-          agraciado atractivo estructural, lujosos y tranquilos balnearios, en
-          donde resaltan las Bocas de Ceniza y la ciénaga de Luruaco; las playas
-          cálidas y arenosas, como las de Santa Verónica, Palmarito, Sabanilla y
-          Puerto Colombia, y el zoológico de Barranquilla. Limita con el
-          departamento de Bolívar está la ciénaga de El Totumo en donde es
-          aprovechada por los visitantes que llegan a disfrutar del volcán.
+          Este departamento es para Colombia uno de los territorios más ricos en
+          biodiversidad con relación al resto del continente, siendo esta
+          característica para el sector turístico una joya de gran valor para
+          labrar grandes oportunidades con relación a esta area. Posee como
+          fortaleza su identidad cultural caracterizada debido a su diversidad
+          étnica presente en la región. Referencia de esta riqueza mencionada
+          son: los Koguis, Arhuacos, Chimila, Wiwas y Kankuanos, que van desde
+          el norte hasta el sur del Departamento.
         </p>
       </div>
     </div>
@@ -33,58 +32,59 @@ import Foteer from "../../components/Foteer.astro";
   </main>
   <div class="section-rutas">
     <CarRuta
-      ruta="/rutacol/ruta-culturenosa"
-      background="/rutacol/assets/background-cultuarenosa.png"
-      buttonText="Ruta Culturenosa"
-      title="Barranquilla-Atlantico"
-      parrafo="Original de Rutacol"
+      background="/rutacol/assets/ruta-del-olvido.png"
+      title="Taganga - Magdalena"
+      parrafo="Original de rutacol"
+      ruta="/rutacol/------------"
+      buttonText="RUTA TIERRA DEL OLVIDO"
+      backgroundColor=" --seventh-color-pink"
+      color="--seventh-color-pink"
     />
     <CarRuta
-      ruta="/rutacol/ruta-cumbia"
-      background="/rutacol/assets/ruta-cumbia.png"
-      buttonText="Ruta Cumbia"
-      title="Barranquilla-Atlantico"
-      parrafo="Original de Rutacol"
-      backgroundColor="--secondary-color-orange"
+      background="/rutacol/assets/ruta-econevada.png"
+      title="Minca - Magdalena"
+      parrafo="Original de rutacol"
+      buttonText="RUTA ECONEVADA"
+      ruta="/rutacol/-----------"
+      backgroundColor="--Primary-color-yellow"
+      color="--Primary-color-yellow"
     />
   </div>
   <div class="section-redireccion">
-    <div class="section-redireccion">
-      <CarsRutas
-        rutaImagen="/rutacol/assets/magdalena.png"
-        title="Region Magdalena"
-        ruta="/rutacol/ruta-magdalena"
-        backgroundColor="--sixth-color-blue"
-        color="--sixth-color-blue"
-      />
-      <CarsRutas
-        rutaImagen="/rutacol/assets/cundinamarca.png"
-        title="Region Cundinamarca"
-        ruta="/rutacol/----------"
-        backgroundColor=" --seventh-color-pink"
-        color=" --seventh-color-pink"
-      />
-    </div>
+    <CarsRutas
+      rutaImagen="/rutacol/assets/atlantico.png"
+      title="Region Atlantico"
+      ruta="/rutacol/ruta-atlantico"
+      backgroundColor="--Primary-color-yellow"
+      color="--Primary-color-yellow"
+    />
+    <CarsRutas
+      rutaImagen="/rutacol/assets/cundinamarca.png"
+      title="Region Cundinamarca"
+      ruta="/rutacol/----------"
+      backgroundColor=" --seventh-color-pink"
+      color=" --seventh-color-pink"
+    />
   </div>
   <Suscribete />
   <Foteer />
 </Layout>
-
 <style>
-  .atlantico {
+  .magdalena {
     display: flex;
     font-family: var(--type-typography);
-    background: var(--Primary-color-yellow);
+    background: var(--sixth-color-blue);
     color: var(--tertiary-color-white);
   }
 
-  .imagen-atlantico {
+  .imagen-magdalena {
     padding-left: 65px;
   }
-  .imagen-atlantico img {
+  .imagen-magdalena img {
+    width: 650px;
     height: 100%;
   }
-  .text-atlantico {
+  .text-magdalena {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -109,7 +109,7 @@ import Foteer from "../../components/Foteer.astro";
     padding: 26px 26px 0px 16px;
   }
 
-  .text-atlantico p {
+  .text-magdalena p {
     width: 527px;
     height: 392px;
     font-style: normal;

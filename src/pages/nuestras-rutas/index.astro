@@ -33,7 +33,29 @@ import CarsRutas from "../../components/cars-rutas.astro";
   </main>
   <div class="cars-ruta">
     <h3>¡Animate!</h3>
-    <CarsRutas />
+    <div class="cars-new">
+      <CarsRutas
+        rutaImagen="/rutacol/assets/atlantico.png"
+        title="Region Atlantico"
+        ruta="/rutacol/ruta-atlantico"
+        backgroundColor="--Primary-color-yellow"
+        color="--Primary-color-yellow"
+      />
+      <CarsRutas
+        rutaImagen="/rutacol/assets/magdalena.png"
+        title="Region Magdalena"
+        ruta="/rutacol/ruta-magdalena"
+        backgroundColor="--sixth-color-blue"
+        color="--sixth-color-blue"
+      />
+      <CarsRutas
+        rutaImagen="/rutacol/assets/cundinamarca.png"
+        title="Region Cundinamarca"
+        ruta="/rutacol/----------"
+        backgroundColor=" --seventh-color-pink"
+        color=" --seventh-color-pink"
+      />
+    </div>
   </div>
   <PruebaServicios />
   <Suscribete />
@@ -134,6 +156,13 @@ import CarsRutas from "../../components/cars-rutas.astro";
     flex-direction: column;
     align-items: center;
     padding-bottom: 80px;
+  }
+  .cars-new {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: auto;
   }
   .cars-ruta h3 {
     justify-content: center;

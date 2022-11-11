@@ -1,28 +1,18 @@
 ---
 import Button from "./Button.astro";
+const { title, ruta, rutaImagen, backgroundColor, color } = Astro.props;
 ---
 
 <div class="ruta">
   <div class="contain-car">
-    <div class="imagen-car , one">
-      <img src="/rutacol/assets/atlantico.png" alt="" />
+    <div
+      class="imagen-car one"
+      style={{ "background-color": `var(${backgroundColor})` }}
+    >
+      <img src={rutaImagen} alt="imagen del atlantico" />
     </div>
-    <p class="p-one">Región Atlántico</p>
-    <a href="/rutacol/ruta-atlantico"><Button /></a>
-  </div>
-  <div class="contain-car">
-    <div class="imagen-car , two">
-      <img src="/rutacol/assets/magdalena.png" alt="" />
-    </div>
-    <p class="p-two">Region Magdalena</p>
-    <a href=""><Button /></a>
-  </div>
-  <div class="contain-car">
-    <div class="imagen-car , three">
-      <img src="/rutacol/assets/cundinamarca.png" alt="" />
-    </div>
-    <p class="p-three">Region Cundinamarca</p>
-    <a href=""><Button /></a>
+    <p class="p-one" style={{ color: `var(${color})` }}>{title}</p>
+    <a href={ruta}><Button /></a>
   </div>
 </div>
 <style>
@@ -57,22 +47,8 @@ import Button from "./Button.astro";
   .p-one {
     color: var(--Primary-color-yellow);
   }
-  .p-two {
-    color: var(--sixth-color-blue);
-  }
-  .p-three {
-    color: var(--seventh-color-pink);
-  }
+
   .one {
-    background: var(--Primary-color-yellow);
-    border-radius: 21px;
-  }
-  .two {
-    background: var(--sixth-color-blue);
-    border-radius: 21px;
-  }
-  .three {
-    background: var(--seventh-color-pink);
     border-radius: 21px;
   }
 </style>
