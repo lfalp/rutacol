@@ -1,0 +1,166 @@
+---
+import Button from "./Button.astro";
+---
+
+<form action="" method="">
+  <ul>
+    <div class="form-text">
+      <li>
+        <input type="text" name="user_name" placeholder="Nombre y apellido" />
+      </li>
+      <li>
+        <input type="text" placeholder="Numero de identificación" />
+      </li>
+    </div>
+    <div class="date-person">
+      <li>
+        <input type="text" id="mail" name="user_mail" placeholder="Pais" />
+      </li>
+      <li>
+        <input
+          class="gmail"
+          type="email"
+          id="mail"
+          name="user_mail"
+          placeholder="Correo Electronico"
+        />
+      </li>
+      <li>
+        <input type="tel" id="mail" name="user_mail" placeholder="cel:" />
+      </li>
+    </div>
+    <div class="client-aggregation">
+      <li>
+        <textarea
+          id="msg"
+          name="user_message"
+          placeholder="¿Por qué le gustaria que tu Ruta hiciera parte de RutaCol"
+        ></textarea>
+      </li>
+      <p>
+        A continuacion, adjunta un archivo con toda la informació sobre la
+        creacioń de tu ruta. Debes tener en cuenta mencionar la región
+        (departamento), nombres de lugares, actividades y restaurantes exactos,
+        asi como su dirección, parte socio-economica y fotografias.
+      </p>
+      <li>
+        <textarea id="msg" name="user_message"></textarea>
+      </li>
+    </div>
+    <div class="note">
+      <p>
+        Nota. Una vex enviada la información, el equipo de RutaCol revisara tu
+        ruta y se pondrá en contacto contigo para mas información.
+      </p>
+      <spam class="button">
+        <button type="submit">Enviar <ion-icon name="arrow-forward" /></button>
+      </spam>
+    </div>
+  </ul>
+</form>
+<style>
+  form {
+    width: 900px;
+    border-top: 2px solid #d5d0d0;
+    padding-top: 40px;
+  }
+  form li {
+    list-style: none;
+  }
+  form ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .date-person {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .date-person .gmail {
+    width: 400px;
+  }
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 900px;
+  }
+
+  input {
+    width: 100%;
+    height: 55px;
+    box-shadow: 2px 3px 2px 1px rgb(0 0 0 / 20%);
+    border: none;
+    outline: none;
+    padding-left: 20px;
+  }
+  input::placeholder {
+    color: var(--secondary-color-orange);
+    font-family: var(--type-typography);
+    font-size: 16px;
+  }
+  textarea {
+    width: 100%;
+    height: 130px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    box-shadow: 2px 3px 2px 1px rgb(0 0 0 / 20%);
+  }
+  textarea::placeholder {
+    padding-top: 30px;
+    padding-left: 20px;
+    width: 369px;
+    height: auto;
+    color: var(--secondary-color-orange);
+    font-family: var(--secondary-color-orange);
+    font-size: 20px;
+  }
+  .client-aggregation {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .client-aggregation p {
+    text-align: center;
+    font-size: 15px;
+    color: var(--fifth-color-grey);
+  }
+  .note p {
+    text-align: center;
+    font-size: 15px;
+    color: var(--fifth-color-grey);
+  }
+  .note {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 198px;
+    height: 55px;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+    background-color: var(--secondary-color-orange);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: var(#6d6b6b);
+    opacity: 0.5;
+  }
+</style>

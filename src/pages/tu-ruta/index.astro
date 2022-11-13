@@ -1,7 +1,144 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Formulario from "../../components/formulario.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import Foteer from "../../components/Foteer.astro";
+import BarraHorizontal from "../../components/barra-horizontal.astro";
 ---
 
 <Layout title="Tu rutas">
-  <main>kwkdwpokdokwd</main>
+  <main>
+    <main>
+      <img
+        src="/rutacol/assets/imagen-tus-rutas.png"
+        alt="Imagen original de rutacol"
+      />
+      <div class="text-main">
+        <h2>Crea tu propia ruta y se parte de la comunidad</h2>
+        <p>
+          Crea tus propias rutas de turismo y brindales la oportunidad a otros
+          usuarios de descubrir Colombia, gracias a tus alternativas
+        </p>
+      </div>
+    </main>
+  </main>
+  <div class="section-text-easy">
+    <p>
+      Para RutaCol es muy importante la seguridad y veracidad de sus Rutas,
+      puesto que de esta manera te ofrecemos un servicio optimo y de calidad.
+      Por ello, te invitamos a llenar el siguiente formulario con toda la
+      informacion pertinente para que tu ruta sea agregada en nuestra comunidad
+    </p>
+  </div>
+  <div class="formulario">
+    <div class="title-form">
+      <h2>Formulario para la ruta</h2>
+    </div>
+    <div class="form-ruta">
+      <Formulario />
+    </div>
+  </div>
+  <div class="section-services">
+    <div class="services">
+      <PruebaServicios />
+    </div>
+    <BarraHorizontal />
+  </div>
+  <div class="section-footer">
+    <Foteer />
+  </div>
 </Layout>
+<style>
+  main {
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.68),
+        rgba(0, 0, 0, 0.68)
+      ),
+      url("/rutacol/assets/background-tus-rutas.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  main img {
+    width: 700px;
+  }
+  .text-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+  }
+  .text-main p {
+    width: 527px;
+    text-align: end;
+    height: 81px;
+  }
+  .text-main h2 {
+    position: relative;
+    font-size: 70px;
+    width: 527px;
+    height: 255px;
+    text-align: end;
+    font-weight: bold;
+  }
+  .text-main h2::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 8px;
+    content: "";
+    bottom: -93px;
+    right: 0;
+    width: 214px;
+  }
+  /* -------------------------------------- */
+  .section-text-easy {
+    display: flex;
+    justify-content: center;
+    padding: 40px 132px;
+    background-color: var(--sixth-color-blue);
+  }
+  .section-text-easy p {
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+    font-weight: 300;
+    font-size: 30px;
+  }
+  /* ----------------------------- */
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form-ruta {
+    display: flex;
+    justify-content: center;
+  }
+  .title-form {
+    display: flex;
+    width: 932px;
+    margin: 0 auto;
+  }
+  .title-form h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    color: var(--secondary-color-orange);
+    padding: 26px 26px 24px 16px;
+  }
+  /* ------------------------ */
+  .section-services {
+    padding-top: 40px;
+  }
+  .services {
+    border-top: 2px solid #d5d0d0;
+    width: 900px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  /* --------------------- */
+</style>

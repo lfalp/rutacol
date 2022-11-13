@@ -3,8 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 import Foteer from "../components/Foteer.astro";
 import PruebaServicios from "../components/PruebaServicios.astro";
-import Suscribete from "../components/suscribete.astro";
 import BarraVertical from "../components/barra-vertical.astro";
+import Form from "../components/form.astro";
+import TextSucribete from "../components/text-sucribete.astro";
 ---
 
 <Layout title="Rutacol">
@@ -101,7 +102,15 @@ import BarraVertical from "../components/barra-vertical.astro";
     </div>
   </div>
   <PruebaServicios />
-  <Suscribete />
+  <div class="section-suscribete">
+    <Form
+      title="Suscribete"
+      nombre="Nombre y apellidos"
+      correo="Correo electronico"
+      mensaje="Mensaje"
+    />
+    <TextSucribete />
+  </div>
   <Foteer />
 </Layout>
 
@@ -402,4 +411,9 @@ import BarraVertical from "../components/barra-vertical.astro";
     margin-right: 90px;
   }
   /* -------------------------------------- */
+  .section-suscribete {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
 </style>

@@ -1,14 +1,46 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Suscribete from "../../components/suscribete.astro";
+import Form from "../../components/form.astro";
 import Foteer from "../../components/Foteer.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import BarraHorizontal from "../../components/barra-horizontal.astro";
 ---
 
 <Layout title="Contactanos">
   <main>
-    <Suscribete />
-    <Foteer />
+    <div>
+      <img src="/rutacol/assets/imagen-contactanos.png" alt="" />
+    </div>
+    <Form
+      title="Contactanos"
+      nombre="Nombre y apellidos"
+      correo="Correo electronico"
+      mensaje="Mensaje"
+    />
   </main>
+  <div class="section-imagen"></div>
+  <div class="section-services">
+    <div class="services">
+      <PruebaServicios />
+    </div>
+    <BarraHorizontal />
+  </div>
+  <Foteer />
 </Layout>
 
-<style></style>
+<style>
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* ----------------------------- */
+  .section-imagen {
+    width: 100%;
+    background-image: url("/rutacol/assets/bear.png");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 700px;
+  }
+</style>

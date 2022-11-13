@@ -1,0 +1,120 @@
+---
+import Button from "./Button.astro";
+const { title, nombre, correo, mensaje } = Astro.props;
+---
+
+<form class="section-form">
+  <div class="form">
+    <h3>{title}</h3>
+    <div>
+      <div class="name-gmail">
+        <textarea placeholder={nombre}></textarea>
+        <textarea placeholder={correo}></textarea>
+      </div>
+      <div class="mensaje">
+        <textarea placeholder={mensaje}></textarea>
+      </div>
+    </div>
+    <div class="button-form">
+      <button class="boton" type="submit" value="sibmit"
+        >Enviar <ion-icon name="arrow-forward" />
+      </button>
+    </div>
+  </div>
+</form>
+<style>
+  .section-form {
+    display: flex;
+    justify-content: center;
+    font-family: var(--type-typography);
+    padding-top: 100px;
+    padding-bottom: 38px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 516px;
+    height: 635px;
+    padding: 32px;
+  }
+  .form div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .form input {
+    width: 452px;
+    height: 48px;
+    font-size: 14px;
+    padding: 0 14px;
+    border: 1px solid var(--fifth-color-grey);
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .form label {
+    color: var(--fifth-color-grey);
+  }
+  .form h3 {
+    width: 100%;
+    height: 72px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #d5d0d0;
+    color: var(--secondary-color-orange);
+  }
+  /* --------------------------- */
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 55px;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+    background-color: var(--secondary-color-orange);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    outline: none;
+  }
+  button:hover {
+    background: var(#6d6b6b);
+    opacity: 0.5;
+  }
+  /* ---------------------------------------- */
+  .name-gmail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .name-gmail textarea {
+    height: 55px;
+    padding: 15px 0 0 10px;
+    outline: none;
+  }
+  textarea::placeholder {
+    height: 24px;
+    font-size: 20px;
+    color: var(--secondary-color-orange);
+    font-family: var(--type-typography);
+  }
+  .mensaje textarea {
+    height: 141px;
+    outline: none;
+  }
+  .mensaje textarea::placeholder {
+    padding: 15px 0 0 10px;
+  }
+  .button-form {
+    align-items: flex-end;
+  }
+</style>

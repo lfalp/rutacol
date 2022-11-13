@@ -2,9 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 import Button from "../../components/Button.astro";
 import PruebaServicios from "../../components/PruebaServicios.astro";
-import Suscribete from "../../components/suscribete.astro";
+import Form from "../../components/form.astro";
 import Foteer from "../../components/Foteer.astro";
 import CarsRutas from "../../components/cars-rutas.astro";
+import TextSucribete from "../../components/text-sucribete.astro";
 ---
 
 <Layout title="Nuestras Rutas">
@@ -58,7 +59,15 @@ import CarsRutas from "../../components/cars-rutas.astro";
     </div>
   </div>
   <PruebaServicios />
-  <Suscribete />
+  <div class="section-suscribete">
+    <Form
+      title="Suscribete"
+      nombre="Nombre y apellidos"
+      correo="Correo electronico"
+      mensaje="Mensaje"
+    />
+    <TextSucribete />
+  </div>
   <Foteer />
 </Layout>
 
@@ -179,4 +188,9 @@ import CarsRutas from "../../components/cars-rutas.astro";
     color: var(--sixth-color-blue);
   }
   /* ---------------------- */
+  .section-suscribete {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
 </style>
