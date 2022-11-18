@@ -101,7 +101,21 @@ import TextSucribete from "../components/text-sucribete.astro";
       </div>
     </div>
   </div>
-  <PruebaServicios />
+  <div class="services">
+    <div>
+      <PruebaServicios
+        title="Prueba nuestros servicios"
+        rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
+        rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
+        rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
+        rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
+        parrafo="Prueba nuestras rutas"
+        parrafo2="Crea tus rutas"
+        parrafo3="Filtra tus rutas"
+        parrafo4="Incluye tu negocio en una ruta"
+      />
+    </div>
+  </div>
   <div class="section-suscribete">
     <Form
       title="Suscribete"
@@ -143,14 +157,7 @@ import TextSucribete from "../components/text-sucribete.astro";
     gap: 16px;
     justify-content: space-around;
   }
-  h1::after {
-    position: absolute;
-    border-bottom: var(--tertiary-color-white) solid 8px;
-    content: "";
-    bottom: -16px;
-    left: 0;
-    width: 99px;
-  }
+
   h1 {
     position: relative;
     font-size: 72px;

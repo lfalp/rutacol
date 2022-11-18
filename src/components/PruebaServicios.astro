@@ -1,106 +1,122 @@
+---
+const {
+  title,
+  rutaDeImagen,
+  rutaDeImagen2,
+  rutaDeImagen3,
+  rutaDeImagen4,
+  parrafo,
+  parrafo2,
+  parrafo3,
+  parrafo4,
+} = Astro.props;
+---
+
 <div class="section-servicios">
-  <h2>Prueba nuestros servicios</h2>
+  <h2>{title}</h2>
   <div class="main-servicios">
     <div class="servicios">
       <div class="iconBox">
         <div class="prueba">
-          <img src="/rutacol/assets/icons/icon-ruta.png" alt="" />
+          <img src={rutaDeImagen} alt="" />
         </div>
-        <p>Prueba nuestras rutas</p>
+        <a href=""><p>{parrafo}</p></a>
       </div>
       <div class="iconBox">
         <div class="crea">
-          <img src="/rutacol/assets/icons/icon-navegante.png" alt="" />
+          <img src={rutaDeImagen2} alt="" />
         </div>
-        <p>Crea tus rutas</p>
+        <a href=""><p>{parrafo2}</p></a>
       </div>
       <div class="iconBox">
         <div class="filtra">
-          <img src="/rutacol/assets/icons/icon-gps.png" alt="" />
+          <img src={rutaDeImagen3} alt="" />
         </div>
-        <p>Filtra tus rutas</p>
+        <a href=""><p>{parrafo3}</p></a>
       </div>
       <div class="iconBox">
         <div class="incluye">
-          <img
-            src="/rutacol/assets/icons/icon-marcador-de-posicion.png"
-            alt=""
-          />
+          <img src={rutaDeImagen4} alt="" />
         </div>
-        <p>Incluye tu negocio en una ruta</p>
+        <a href="/rutacol/ruta-negocios"><p>{parrafo4}</p></a>
       </div>
     </div>
   </div>
+  <style>
+    .section-servicios {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: var(--type-typography);
+      justify-content: center;
+      width: 100%;
+      gap: 23px;
+    }
+    .section-servicios a {
+      list-style: none;
+      text-decoration: none;
+    }
+    .servicios {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: 237px;
+      padding-bottom: 80px;
+    }
+    .section-servicios h2 {
+      padding-top: 80px;
+    }
+    h2 {
+      width: 650px;
+      height: 72px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 72px;
+      color: var(--sixth-color-blue);
+    }
+    .iconBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+      gap: 16px;
+      width: 200px;
+      height: 214px;
+    }
+    .iconBox div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+    .iconBox p {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      width: 168px;
+      height: 46px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: var(--fifth-color-grey);
+    }
+    .prueba {
+      background-color: var(--Primary-color-yellow);
+    }
+    .crea {
+      background-color: var(--secondary-color-orange);
+    }
+    .filtra {
+      background-color: var(--sixth-color-blue);
+    }
+    .incluye {
+      background-color: var(--seventh-color-pink);
+    }
+  </style>
 </div>
-<style>
-  .section-servicios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: var(--type-typography);
-    justify-content: center;
-    width: 100%;
-    gap: 23px;
-  }
-  .servicios {
-    display: flex;
-    justify-content: center;
-    width: 872px;
-    height: 237px;
-    padding-bottom: 80px;
-  }
-  .section-servicios h2 {
-    padding-top: 80px;
-  }
-  h2 {
-    width: 650px;
-    height: 72px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 72px;
-    color: var(--sixth-color-blue);
-  }
-  .iconBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    gap: 16px;
-    width: 200px;
-    height: 214px;
-  }
-  .iconBox div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-  }
-  .iconBox p {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 168px;
-    height: 46px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    color: var(--fifth-color-grey);
-  }
-  .prueba {
-    background-color: var(--Primary-color-yellow);
-  }
-  .crea {
-    background-color: var(--secondary-color-orange);
-  }
-  .filtra {
-    background-color: var(--sixth-color-blue);
-  }
-  .incluye {
-    background-color: var(--seventh-color-pink);
-  }
-</style>

@@ -1,0 +1,157 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CarRuta from "../../components/car-ruta.astro";
+import CarsRutas from "../../components/cars-rutas.astro";
+import Form from "../../components/form.astro";
+import TextSucribete from "../../components/text-sucribete.astro";
+import Foteer from "../../components/Foteer.astro";
+---
+
+<Layout title="Departamento de cundinamarca">
+  <main>
+    <div class="main-text-cundinamarca">
+      <h1>Departamento de Cundinamarca</h1>
+      <p>
+        Este el departamento que por su ubicación geográfica abarca el corazón
+        del territorio colombiano, en donde se ubica la ciudad más importante
+        del país, Bogotá Distrito Capital, y cuenta con la fortuna natural de
+        tener todos los climas y paisajes que ofrecen los pisos térmicos. Aunque
+        la capital presenta un clima frío, Cundinamarca variedad de temperaturas
+        desde el cálido ambiente en el valle del río Magdalena y el piedemonte
+        de los Llanos Orientales, hasta el gélido páramo, como el del Sumapaz y
+        Chingaza; lo que hace de éste un destino de tierras fértiles y
+        ecosistemas biodiversos, lo cual genera un atractivo para todos sus
+        visitantes.
+      </p>
+    </div>
+    <div class="imagen-original-rutacol">
+      <img
+        src="/rutacol/assets/imagen-hero.png"
+        alt="Imagen original de RutaCol"
+      />
+      <p>Ilustración - Colombia | Ilustrador - Juan Carlos Correa Barros</p>
+    </div>
+  </main>
+  <div class="section-title-ruta">
+    <p>Ruta</p>
+  </div>
+  <div class="section-rutas">
+    <CarRuta
+      background="/rutacol/assets/ruta-del-olvido.png"
+      title="Guasca, Guatavita y sesquil - Cundinamarca"
+      parrafo="Original de rutacol"
+      ruta="/rutacol/---------------------"
+      buttonText="  RUTA PARQUE REGIONAL"
+      backgroundColor=" --sixth-color-blue"
+      color="--sixth-color-blue"
+    />
+    <CarRuta
+      background="/rutacol/assets/ruta-econevada.png"
+      title="Junin - Cundinamarca"
+      parrafo="Original de rutacol"
+      buttonText="RUTA CASCADA NATURAL"
+      ruta="/rutacol/ruta-junin"
+      backgroundColor="--sixth-color-blue"
+      color="--sixth-color-blue"
+    />
+  </div>
+  <div class="rutas-main">
+    <CarsRutas
+      rutaImagen="/rutacol/assets/atlantico.png"
+      title="Region Atlantico"
+      ruta="/rutacol/ruta-atlantico"
+      backgroundColor="--Primary-color-yellow"
+      color="--Primary-color-yellow"
+    />
+    <CarsRutas
+      rutaImagen="/rutacol/assets/magdalena.png"
+      title="Region Magdalena"
+      ruta="/rutacol/ruta-magdalena"
+      backgroundColor="--sixth-color-blue"
+      color="--sixth-color-blue"
+    />
+  </div>
+  <div class="section-suscribete">
+    <Form
+      title="Suscribete"
+      nombre="Nombre y apellidos"
+      correo="Correo electronico"
+      mensaje="Mensaje"
+    />
+    <TextSucribete />
+  </div>
+  <Foteer />
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    position: relative;
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+    background-color: var(--seventh-color-pink);
+  }
+  .main-text-cundinamarca {
+    width: 766px;
+    padding-left: 53px;
+  }
+  .main-text-cundinamarca h1 {
+    width: 900px;
+    height: 229px;
+    font-size: 90px;
+  }
+  .main-text-cundinamarca p {
+    width: 700px;
+    height: 355px;
+    font-size: 25px;
+  }
+  .imagen-original-rutacol img {
+    position: absolute;
+    right: 21px;
+    width: 586px;
+    height: 579px;
+  }
+  /* -------------------------- */
+  .section-title-ruta {
+    position: relative;
+    width: 100%;
+    height: 253px;
+    font-family: var(--type-typography);
+    background-image: url("/rutacol/assets/imagen-ruta-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .section-title-ruta p {
+    position: absolute;
+    left: 50px;
+    bottom: 62px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 85px;
+    text-align: center;
+    color: var(--background-color-white);
+  }
+  /* ----------------------- */
+  .section-rutas {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background-color: var(--background-color-white);
+  }
+  /* ------------------- */
+  .rutas-main {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 50px;
+  }
+  /* ---------------------------- */
+  .section-suscribete {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 40px;
+  }
+</style>

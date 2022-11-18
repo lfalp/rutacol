@@ -4,6 +4,7 @@ import CarRuta from "../../components/car-ruta.astro";
 import CarsRutas from "../../components/cars-rutas.astro";
 import Form from "../../components/form.astro";
 import Foteer from "../../components/Foteer.astro";
+import TextSucribete from "../../components/text-sucribete.astro";
 ---
 
 <Layout title="Departamento del Magdalena">
@@ -35,7 +36,7 @@ import Foteer from "../../components/Foteer.astro";
       background="/rutacol/assets/ruta-del-olvido.png"
       title="Taganga - Magdalena"
       parrafo="Original de rutacol"
-      ruta="/rutacol/------------"
+      ruta="/rutacol/---------------------"
       buttonText="RUTA TIERRA DEL OLVIDO"
       backgroundColor=" --seventh-color-pink"
       color="--seventh-color-pink"
@@ -45,7 +46,7 @@ import Foteer from "../../components/Foteer.astro";
       title="Minca - Magdalena"
       parrafo="Original de rutacol"
       buttonText="RUTA ECONEVADA"
-      ruta="/rutacol/-----------"
+      ruta="/rutacol/--------------"
       backgroundColor="--Primary-color-yellow"
       color="--Primary-color-yellow"
     />
@@ -61,12 +62,20 @@ import Foteer from "../../components/Foteer.astro";
     <CarsRutas
       rutaImagen="/rutacol/assets/cundinamarca.png"
       title="Region Cundinamarca"
-      ruta="/rutacol/----------"
+      ruta="/rutacol/ruta-cundinamarca"
       backgroundColor=" --seventh-color-pink"
       color=" --seventh-color-pink"
     />
   </div>
-  <Form />
+  <div class="section-suscribete">
+    <Form
+      title="Suscribete"
+      nombre="Nombre y apellidos"
+      correo="Correo electronico"
+      mensaje="Mensaje"
+    />
+    <TextSucribete />
+  </div>
   <Foteer />
 </Layout>
 <style>
@@ -151,5 +160,10 @@ import Foteer from "../../components/Foteer.astro";
     justify-content: center;
     gap: 24px;
     padding: 60px 0 60px 0;
+  }
+  /* --------------------- */
+  .section-suscribete {
+    display: flex;
+    justify-content: center;
   }
 </style>

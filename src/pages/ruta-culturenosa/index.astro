@@ -7,7 +7,7 @@ import Foteer from "../../components/Foteer.astro";
 ---
 
 <Layout title="Ruta culturenosa">
-  <main class="section main">
+  <main>
     <p>Ruta Culturenosa</p>
   </main>
   <div class="section-text-culturenosa">
@@ -156,7 +156,17 @@ import Foteer from "../../components/Foteer.astro";
       />
     </div>
   </div>
-  <PruebaServicios />
+  <PruebaServicios
+    title="Prueba nuestros servicios"
+    rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
+    rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
+    rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
+    rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
+    parrafo="Prueba nuestras rutas"
+    parrafo2="Crea tus rutas"
+    parrafo3="Filtra tus rutas"
+    parrafo4="Incluye tu negocio en una ruta"
+  />
   <Foteer />
 </Layout>
 <style>

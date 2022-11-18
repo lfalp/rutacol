@@ -1,0 +1,378 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import BarraHorizontal from "../../components/barra-horizontal.astro";
+import Foteer from "../../components/Foteer.astro";
+---
+
+<Layout title="Ruta de Negocio">
+  <main>
+    <h1>¿Quieres que tú negocio sea parte de una Ruta?</h1>
+    <p>
+      Fortalece tu negocio, crea las mejores ofertas y da a conocer tu
+      microempresa.
+    </p>
+  </main>
+  <div class="section-text-pink">
+    <p>
+      Para RutaCol es muy importante la seguridad y veracidad de sus Rutas,
+      puesto que de esta manera te ofrecemos un servicio optimo y de calidad.
+      Por ello, te invitamos a llenar el siguiente formulario con toda la
+      información pertinente para que tu ruta sea agregada en nuestra comunidad.
+    </p>
+  </div>
+  <div class="section-form">
+    <div class="title-form">
+      <h2>Formulario para incluir tu negocio en una Ruta - RutaCol</h2>
+    </div>
+    <div class="box-form">
+      <form action="" method="">
+        <ul>
+          <div class="form-text">
+            <li>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Nombre y apellido"
+              />
+            </li>
+            <li>
+              <input type="text" placeholder="Numero de identificación" />
+            </li>
+          </div>
+          <div class="date-person">
+            <li>
+              <input
+                type="text"
+                id="mail"
+                name="user_mail"
+                placeholder="Pais"
+              />
+            </li>
+            <li>
+              <input
+                class="gmail"
+                type="email"
+                id="mail"
+                name="user_mail"
+                placeholder="Correo Electronico"
+              />
+            </li>
+            <li>
+              <input type="tel" id="mail" name="user_mail" placeholder="cel:" />
+            </li>
+          </div>
+          <div>
+            <li>
+              <input
+                type="text"
+                placeholder="Nombre de tu negocio/emprendimiento"
+              />
+            </li>
+          </div>
+          <div class="questionnaire">
+            <li>
+              <input
+                type="text"
+                placeholder="¿En dónde se encuentra ubicado tu negocio?"
+              />
+            </li>
+            <li>
+              <input
+                type="text"
+                placeholder="Sector al cuál pertenece tú negocio"
+              />
+            </li>
+          </div>
+          <div class="client-aggregation">
+            <li>
+              <textarea
+                id="msg"
+                name="user_message"
+                placeholder="A continuación, cuéntanos brevemente sobre tú negocio; en qué se enfoca, antigüedad, servicio y/o productos que ofrecen"
+              ></textarea>
+            </li>
+          </div>
+          <div class="note">
+            <p>
+              Nota. Una vex enviada la información, el equipo de RutaCol
+              revisara tu ruta y se pondrá en contacto contigo para mas
+              información.
+            </p>
+            <spam class="button">
+              <button type="submit" value="enviar el formulario"
+                >Enviar <ion-icon name="arrow-forward" />
+              </button>
+            </spam>
+          </div>
+        </ul>
+      </form>
+    </div>
+  </div>
+  <div class="section-info-negocio">
+    <div class="imagen-negocio">
+      <img
+        src="/rutacol/assets/iphone-col.png"
+        alt="Celular con logo de RutaCol"
+      />
+    </div>
+    <div class="main-text-negocio">
+      <h2>
+        Fortalece tu negocio, crea las mejores ofertas y da a conocer tu
+        microempresa.
+      </h2>
+      <p>Da tu primer paseo por Colombia</p>
+    </div>
+  </div>
+  <div class="services">
+    <h2>Prueba nuestros servicios</h2>
+    <div class="ruta-services">
+      <PruebaServicios
+        rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
+        rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
+        rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
+        rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
+        parrafo="Prueba nuestras rutas"
+        parrafo2="Crea tus rutas"
+        parrafo3="Filtra tus rutas"
+        parrafo4="Incluye tu negocio en una ruta"
+      />
+    </div>
+    <BarraHorizontal />
+    <Foteer />
+  </div>
+</Layout>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 740px;
+    padding-top: 40px;
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url("/rutacol/assets/ballena-rigth.jpeg");
+  }
+  h1 {
+    font-size: 80px;
+    width: 953px;
+    height: auto;
+    text-align: center;
+  }
+  main p {
+    text-align: center;
+    font-size: 30px;
+    width: 727px;
+    height: 140px;
+  }
+  /* --------------------------------- */
+  .section-text-pink {
+    padding: 32px 100px;
+    background-color: var(--eight-color-pink);
+  }
+  .section-text-pink p {
+    font-size: 30px;
+    width: 1098px;
+    height: 195px;
+    font-weight: 500;
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+  }
+  /* ---------------------------------------------- */
+  .section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+  }
+  .title-form h2 {
+    width: 900px;
+    height: auto;
+    font-size: 62px;
+    color: var(--secondary-color-orange);
+  }
+
+  form {
+    width: 900px;
+    border-top: 2px solid #d5d0d0;
+    padding-top: 40px;
+  }
+  form li {
+    list-style: none;
+  }
+  form ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .date-person {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .date-person .gmail {
+    width: 400px;
+  }
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 900px;
+  }
+
+  form input {
+    width: 100%;
+    height: 55px;
+    box-shadow: 2px 3px 2px 1px rgb(0 0 0 / 20%);
+    border: none;
+    outline: none;
+    padding-left: 20px;
+  }
+  form input::placeholder {
+    color: var(--secondary-color-orange);
+    font-family: var(--type-typography);
+    font-size: 16px;
+  }
+  textarea {
+    width: 900px;
+    height: 130px;
+    padding-top: 24px;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 3px 2px 1px rgb(0 0 0 / 20%);
+  }
+
+  .client-aggregation textarea::placeholder {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: var(--fifth-color-grey);
+  }
+  .note p {
+    text-align: center;
+    font-size: 15px;
+    color: var(--fifth-color-grey);
+  }
+  .note {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 198px;
+    height: 55px;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--tertiary-color-white);
+    background-color: var(--secondary-color-orange);
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: var(#6d6b6b);
+    opacity: 0.5;
+  }
+  .questionnaire {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    gap: 81px;
+  }
+  .questionnaire input {
+    width: 400px;
+    height: 100px;
+  }
+  .client-aggregation input::placeholder {
+    width: 300px;
+    height: 100%;
+    padding-right: 20px;
+  }
+
+  /* ---------------------------------------------- */
+  .section-info-negocio {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 583px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.68),
+        rgba(0, 0, 0, 0.68)
+      ),
+      url("/rutacol/assets/playa-fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .imagen-negocio img {
+    position: absolute;
+    height: 832px;
+    top: -114px;
+    left: -4px;
+  }
+  .main-text-negocio {
+    position: relative;
+    padding: 80px 150px 0 0;
+    color: var(--tertiary-color-white);
+    font-size: var(--type-typography);
+  }
+  .main-text-negocio h2 {
+    width: 727px;
+    height: 207px;
+    font-size: 50px;
+    text-align: end;
+    padding-bottom: 34px;
+  }
+  .main-text-negocio h2::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 8px;
+    content: "";
+    bottom: 298px;
+    right: 153px;
+    width: 214px;
+  }
+  .main-text-negocio p {
+    width: 100%;
+    height: 59px;
+    font-size: 30px;
+    text-align: end;
+  }
+  .services {
+    position: relative;
+  }
+  .services h2 {
+    position: absolute;
+    font-size: 55px;
+    width: 670px;
+    top: 183px;
+    left: 215px;
+    color: var(--sixth-color-blue);
+  }
+  .ruta-services {
+    padding-top: 165px;
+  }
+</style>
