@@ -4,6 +4,7 @@ import CarRuta from "../../components/car-ruta.astro";
 import CarsRutas from "../../components/cars-rutas.astro";
 import Form from "../../components/form.astro";
 import Foteer from "../../components/Foteer.astro";
+import TextSucribete from "../../components/text-sucribete.astro";
 ---
 
 <Layout title="Departamento del Atlantico">
@@ -66,7 +67,15 @@ import Foteer from "../../components/Foteer.astro";
       />
     </div>
   </div>
-  <Form />
+  <div class="section-suscribete">
+    <Form
+      title="Suscribete"
+      nombre="Nombre y apellidos"
+      correo="Correo electronico"
+      mensaje="Mensaje"
+    />
+    <TextSucribete />
+  </div>
   <Foteer />
 </Layout>
 
@@ -151,5 +160,10 @@ import Foteer from "../../components/Foteer.astro";
     justify-content: center;
     gap: 24px;
     padding: 60px 0 60px 0;
+  }
+  .section-suscribete {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
   }
 </style>
