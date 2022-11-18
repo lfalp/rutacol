@@ -1,5 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import CarsRutas from "../../components/cars-rutas.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import Foteer from "../../components/Foteer.astro";
 ---
 
 <Layout title="Ruta De Junin">
@@ -141,6 +144,42 @@ import Layout from "../../layouts/Layout.astro";
       entrada de una choza construida en el mismo material.
     </p>
   </div>
+  <div class="section-descubre-mas">
+    <div class="descubre-mas">
+      <div class="title-descubre-mas">
+        <h2>Descubre más rutas</h2>
+      </div>
+      <div class="descubre-ruta-car">
+        <CarsRutas
+          rutaImagen="/rutacol/assets/magdalena.png"
+          title="Region Magdalena"
+          ruta="/rutacol/ruta-magdalena"
+          backgroundColor="--sixth-color-blue"
+          color="--secondary-color-orange"
+        />
+        <CarsRutas
+          rutaImagen="/rutacol/assets/cundinamarca.png"
+          title="Region Cundinamarca"
+          ruta="/rutacol/----------"
+          backgroundColor=" --seventh-color-pink"
+          color=" --secondary-color-orange"
+        />
+      </div>
+    </div>
+    <div class="otras-rutas">
+      <PruebaServicios
+        rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
+        rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
+        rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
+        rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
+        parrafo="Prueba nuestras rutas"
+        parrafo2="Crea tus rutas"
+        parrafo3="Filtra tus rutas"
+        parrafo4="Incluye tu negocio en una ruta"
+      />
+    </div>
+  </div>
+  <Foteer />
 </Layout>
 <style>
   main {
@@ -338,6 +377,9 @@ import Layout from "../../layouts/Layout.astro";
         rgba(0, 0, 0, 0.38)
       ),
       url("/rutacol/assets/parque-arata.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-top: 30px solid var(--tertiary-color-white);
     border-left: 30px solid var(--tertiary-color-white);
   }
@@ -462,5 +504,24 @@ import Layout from "../../layouts/Layout.astro";
     font-size: 15px;
     color: var(--tertiary-color-white);
     font-family: var(--type-typography);
+  }
+  .otras-rutas {
+    width: 600px;
+  }
+  .title-descubre-mas h2 {
+    font-size: 70px;
+    width: 589px;
+    padding: 0px 0 40px 0;
+    color: var(--secondary-color-orange);
+    font-family: var(--type-typography);
+  }
+  .section-descubre-mas {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+  }
+  .descubre-ruta-car {
+    display: flex;
+    gap: 24px;
   }
 </style>
