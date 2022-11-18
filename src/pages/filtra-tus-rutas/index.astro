@@ -1,0 +1,145 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PruebaServicios from "../../components/PruebaServicios.astro";
+import Foteer from "../../components/Foteer.astro";
+import BarraHorizontal from "../../components/barra-horizontal.astro";
+---
+
+<Layout title="filtra-tu-ruta">
+  <main>
+    <h1>Filtra tus rutas</h1>
+    <div class="box-input">
+      <i class="icon ion-md-search"></i>
+      <input type="text" />
+    </div>
+  </main>
+  <div class="section-five">
+    <div class="container-five">
+      <img src="/rutacol/assets/iphone-col.png" alt="" />
+      <div class="text">
+        <h3>
+          Fortalece tu negocio, crea las mejores ofertas y da a conocer tu
+          microempresa.
+        </h3>
+        <p>Da tu primer paseo por Colombia</p>
+      </div>
+    </div>
+  </div>
+  <PruebaServicios
+    title="Prueba nuestros servicios"
+    rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
+    rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
+    rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
+    rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
+    parrafo="Prueba nuestras rutas"
+    parrafo2="Crea tus rutas"
+    parrafo3="Filtra tus rutas"
+    parrafo4="Incluye tu negocio en una ruta"
+  />
+  <BarraHorizontal />
+  <Foteer />
+</Layout>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 775px;
+    padding-top: 50px;
+    background-image: url("/rutacol/assets/mono.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main h1 {
+    text-align: center;
+    font-size: 90px;
+    width: 1122px;
+    height: 153px;
+    color: var(--tertiary-color-white);
+    font-family: var(--type-typography);
+  }
+  .box-input {
+    display: flex;
+    position: relative;
+    width: 739px;
+    height: 54px;
+    padding-left: 52px;
+    background-color: var(--tertiary-color-white);
+    border-radius: 32px;
+  }
+
+  .box-input i {
+    position: absolute;
+    position: absolute;
+    font-size: 44px;
+    left: 14px;
+    top: 4px;
+    color: var(--fifth-color-grey);
+  }
+  .box-input input {
+    border-radius: 32px;
+    font-size: 18px;
+    width: 739px;
+    height: 54px;
+    border: none;
+    outline: none;
+  }
+  .section-five {
+    width: 100%;
+    font-family: var(--type-typography);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/rutacol/assets/playa-fondo.png");
+    background-blend-mode: darken, normal;
+    background-size: cover;
+    color: var(--tertiary-color-white);
+    position: relative;
+  }
+  .section-five h3 {
+    width: 650px;
+    height: 288px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+  }
+  .section-five p {
+    width: 650px;
+    height: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .container-five img {
+    position: absolute;
+    width: 374px;
+    height: 832px;
+    left: 81px;
+    bottom: 35px;
+  }
+  .container-five {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 123px;
+    padding-top: 113px;
+    padding-bottom: 113px;
+    margin-right: 90px;
+  }
+  .text {
+    text-align: end;
+  }
+  .text h3::after {
+    position: absolute;
+    border-bottom: var(--tertiary-color-white) solid 6px;
+    content: "";
+    bottom: 169px;
+    right: 91px;
+    width: 214px;
+  }
+</style>
