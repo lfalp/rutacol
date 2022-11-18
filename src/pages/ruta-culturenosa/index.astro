@@ -131,42 +131,42 @@ import Foteer from "../../components/Foteer.astro";
       <p>Realismo Mágico Hostal - Barranquilla (Atlántico)</p>
     </div>
   </div>
-  <div class="cars-ruta">
-    <div class="cars-new">
-      <CarsRutas
-        rutaImagen="/rutacol/assets/atlantico.png"
-        title="Region Atlantico"
-        ruta="/rutacol/ruta-atlantico"
-        backgroundColor="--Primary-color-yellow"
-        color="--Primary-color-yellow"
-      />
-      <CarsRutas
-        rutaImagen="/rutacol/assets/magdalena.png"
-        title="Region Magdalena"
-        ruta="/rutacol/ruta-magdalena"
-        backgroundColor="--sixth-color-blue"
-        color="--sixth-color-blue"
-      />
-      <CarsRutas
-        rutaImagen="/rutacol/assets/cundinamarca.png"
-        title="Region Cundinamarca"
-        ruta="/rutacol/----------"
-        backgroundColor=" --seventh-color-pink"
-        color=" --seventh-color-pink"
+
+  <div class="section-descubre-mas">
+    <div class="descubre-mas">
+      <div class="title-descubre-mas">
+        <h2>Descubre más rutas</h2>
+      </div>
+      <div class="descubre-ruta-car">
+        <CarsRutas
+          rutaImagen="/rutacol/assets/magdalena.png"
+          title="Region Magdalena"
+          ruta="/rutacol/ruta-magdalena"
+          backgroundColor="--sixth-color-blue"
+          color="--secondary-color-orange"
+        />
+        <CarsRutas
+          rutaImagen="/rutacol/assets/cundinamarca.png"
+          title="Region Cundinamarca"
+          ruta="/rutacol/ruta-cundinamarca"
+          backgroundColor=" --seventh-color-pink"
+          color=" --secondary-color-orange"
+        />
+      </div>
+    </div>
+    <div class="otras-rutas">
+      <PruebaServicios
+        rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
+        rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
+        rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
+        rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
+        parrafo="Prueba nuestras rutas"
+        parrafo2="Crea tus rutas"
+        parrafo3="Filtra tus rutas"
+        parrafo4="Incluye tu negocio en una ruta"
       />
     </div>
   </div>
-  <PruebaServicios
-    title="Prueba nuestros servicios"
-    rutaDeImagen="/rutacol/assets/icons/icon-ruta.png"
-    rutaDeImagen2="/rutacol/assets/icons/icon-navegante.png"
-    rutaDeImagen3="/rutacol/assets/icons/icon-gps.png"
-    rutaDeImagen4="/rutacol/assets/icons/icon-marcador-de-posicion.png"
-    parrafo="Prueba nuestras rutas"
-    parrafo2="Crea tus rutas"
-    parrafo3="Filtra tus rutas"
-    parrafo4="Incluye tu negocio en una ruta"
-  />
   <Foteer />
 </Layout>
 <style>
@@ -458,4 +458,23 @@ import Foteer from "../../components/Foteer.astro";
     height: auto;
   }
   /* ---------------------------------- */
+  .otras-rutas {
+    width: 600px;
+  }
+  .title-descubre-mas h2 {
+    font-size: 70px;
+    width: 589px;
+    padding: 0px 0 40px 0;
+    color: var(--secondary-color-orange);
+    font-family: var(--type-typography);
+  }
+  .section-descubre-mas {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+  }
+  .descubre-ruta-car {
+    display: flex;
+    gap: 24px;
+  }
 </style>
